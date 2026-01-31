@@ -39,6 +39,7 @@
     "promptmasters": "Promptmasters",
     "prompts": "Prompts",
     "skills": "Vaardigheden",
+    "workflows": "Workflows",
     "categories": "Categorieën",
     "tags": "Tags",
     "settings": "Instellingen",
@@ -50,7 +51,8 @@
     "ide": "Typed-Prompts IDE",
     "developers": "Ontwikkelaars",
     "book": "Boek",
-    "forKids": "Voor kinderen"
+    "forKids": "Voor kinderen",
+    "more": "Meer"
   },
   "brand": {
     "copyLogoSvg": "Logo SVG kopiëren",
@@ -62,6 +64,7 @@
     "logoWithName": "Logo met naam",
     "forLightBackgrounds": "Voor lichte achtergronden",
     "forDarkBackgrounds": "Voor donkere achtergronden",
+    "animatedLogos": "Geanimeerde Logo's",
     "brandColors": "Merkkleuren",
     "clickToCopy": "Klik om hex-waarde te kopiëren",
     "primary": "Primaire merkkleur",
@@ -141,6 +144,10 @@
     "mcpCommandPlaceholder": "npx -y @mcp/server-name",
     "mcpToolsPlaceholder": "tool1, tool2",
     "add": "Toevoegen",
+    "workflowLink": "Workflow Link",
+    "workflowLinkDescription": "URL waar gebruikers deze workflow kunnen testen",
+    "workflowLinkCreateNote": "Sla eerst de prompt op en voeg daarna verbonden prompts toe om dit veld in te schakelen.",
+    "workflowLinkPlaceholder": "https://example.com/workflow-demo",
     "advancedOptions": "Geavanceerde opties",
     "worksBestWith": "Werkt het beste met",
     "mcpTools": "MCP-tools",
@@ -834,6 +841,32 @@
     "profileUrl": "Je profiel-URL",
     "email": "E-mail",
     "emailCannotChange": "E-mail kan niet worden gewijzigd",
+    "bio": "Bio",
+    "bioPlaceholder": "Vertel ons iets over jezelf...",
+    "bioCharCount": "{count}/250",
+    "customLinks": "Links",
+    "customLinksDescription": "Voeg links toe naar je sociale profielen en websites",
+    "addLink": "Link Toevoegen",
+    "linkType": "Type",
+    "linkUrl": "URL",
+    "linkLabel": "Label (optioneel)",
+    "linkLabelPlaceholder": "Aangepast label",
+    "removeLink": "Verwijderen",
+    "maxLinksReached": "Maximaal 5 links toegestaan",
+    "invalidUrl": "Voer een geldige URL in",
+    "linkTypes": {
+      "website": "Website",
+      "github": "GitHub",
+      "twitter": "X (Twitter)",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "twitch": "Twitch",
+      "discord": "Discord",
+      "mastodon": "Mastodon",
+      "bluesky": "Bluesky",
+      "sponsor": "Sponsor"
+    },
     "saveChanges": "Wijzigingen opslaan",
     "profileUpdated": "Profiel succesvol bijgewerkt",
     "usernameTaken": "Deze gebruikersnaam is al in gebruik"
@@ -846,6 +879,13 @@
     "noPromptsInFeed": "Geen prompts in je feed",
     "subscribeToCategories": "Abonneer op categorieën om hier prompts te zien",
     "viewAllCategories": "Alle categorieën bekijken"
+  },
+  "workflows": {
+    "title": "Workflows",
+    "description": "Prompts met sequentiële stromen en verbindingen",
+    "noWorkflows": "Nog geen workflows",
+    "noWorkflowsDescription": "Workflows zijn prompts die in volgorde verbonden zijn met andere prompts. Maak een prompt en voeg verbindingen toe om een workflow te bouwen.",
+    "browsePrompts": "Prompts bekijken"
   },
   "collection": {
     "title": "Mijn collectie",
@@ -893,9 +933,8 @@
       "harvardUniversity": "Harvard University",
       "columbiaUniversity": "Columbia University",
       "olympicCollege": "Olympic College",
-      "citedIn": "Geciteerd in",
       "referencedIn": "Vermeld in",
-      "arxivPaper": "arXiv Paper",
+      "academicCitations": "Academische Citaties",
       "githubBlog": "GitHub Blog",
       "mostLikedDataset": "#1 Meest gelikete dataset op Hugging Face",
       "githubStars": "GitHub-sterren",
@@ -907,7 +946,7 @@
       "becomeSponsor": "Steun de community",
       "firstEver": "De allereerste promptbibliotheek",
       "releasedOn": "Uitgebracht op 5 dec 2022",
-      "lovedByOpenAI": "Geliefd bij OpenAI-oprichters"
+      "lovedByPioneers": "Geliefd bij AI-pioniers"
     }
   },
   "notifications": {
@@ -1111,6 +1150,14 @@
     "support": "Ondersteuning",
     "about": "Over"
   },
+  "cookies": {
+    "message": "We gebruiken cookies voor analyse.",
+    "accept": "Accepteren",
+    "reject": "Weigeren",
+    "confirmMessage": "Weet je het zeker? Analyses helpen ons verbeteren. Deze app is volledig open source.",
+    "nevermind": "Annuleren",
+    "confirmReject": "Ja, weigeren"
+  },
   "support": {
     "title": "Ondersteuning",
     "description": "Vind antwoorden op veelgestelde vragen of krijg hulp van onze community.",
@@ -1187,8 +1234,8 @@
   },
   "connectedPrompts": {
     "title": "Promptstroom",
-    "description": "Sommige prompts werken als meerstaps-workflows. Verbind je prompts om een reeks te maken.",
     "addPromptFlow": "Deze prompt heeft een volgende stap",
+    "testWorkflow": "Workflow Uitvoeren",
     "addPrevious": "Vorige toevoegen",
     "addNext": "Volgende toevoegen",
     "addPreviousTitle": "Vorige prompt toevoegen",
@@ -1198,6 +1245,7 @@
     "noConnections": "Nog geen verbonden prompts. Voeg verbindingen toe om een promptketen te maken.",
     "previousSteps": "Vorige stappen",
     "nextSteps": "Volgende stappen",
+    "fullFlow": "Volledige workflow",
     "searchPrompt": "Prompt zoeken",
     "searchPlaceholder": "Zoeken op titel...",
     "selectedPrompt": "Geselecteerde prompt",
@@ -1211,7 +1259,19 @@
     "connectionAdded": "Verbinding succesvol toegevoegd",
     "connectionDeleted": "Verbinding verwijderd",
     "deleteFailed": "Kon verbinding niet verwijderen",
-    "noResults": "Geen prompts gevonden"
+    "noResults": "Geen prompts gevonden",
+    "outputText": "tekst",
+    "outputImage": "afbeelding",
+    "outputVideo": "video",
+    "outputAudio": "audio",
+    "outputStructured": "gestructureerd",
+    "outputSkill": "vaardigheid",
+    "inputImage": "afbeelding",
+    "inputVideo": "video",
+    "inputDocument": "document",
+    "inputImages": "{count} afbeeldingen",
+    "inputVideos": "{count} video's",
+    "inputDocuments": "{count} documenten"
   },
   "promptWritingGuide": {
     "title": "Hoe schrijf je geweldige prompts",
@@ -1400,10 +1460,11 @@
     "academicCategoryTitle": "Academische erkenning",
     "communityCategoryTitle": "Community & GitHub",
     "featuredForbes": "Uitgelicht in <link>Forbes</link>",
+    "featuredTagesspiegel": "Featured in <link>Der Tagesspiegel</link>",
     "referencedHarvard": "Gerefereerd door <link>Harvard University</link>",
     "referencedColumbia": "Gerefereerd door <link>Columbia University</link>",
     "referencedOlympic": "Gerefereerd door <link>Olympic College</link>",
-    "citedArxiv": "Geciteerd in <link>arXiv onderzoekspaper</link>",
+    "googleScholarCitations": "<link>40+ academische citaties</link> op Google Scholar",
     "githubStars": "<link>141k+ GitHub-sterren</link>, meest starred prompts-repository",
     "githubStaffPick": "Geselecteerd als <link>GitHub Staff Pick</link>",
     "referencedGithubBlog": "Vermeld in de <link>GitHub Blog</link>",

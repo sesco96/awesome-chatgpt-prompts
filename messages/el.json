@@ -39,6 +39,7 @@
     "promptmasters": "Promptmasters",
     "prompts": "Prompts",
     "skills": "Δεξιότητες",
+    "workflows": "Ροές εργασίας",
     "categories": "Κατηγορίες",
     "tags": "Ετικέτες",
     "settings": "Ρυθμίσεις",
@@ -50,7 +51,8 @@
     "ide": "Typed-Prompts IDE",
     "developers": "Προγραμματιστές",
     "book": "Βιβλίο",
-    "forKids": "Για Παιδιά"
+    "forKids": "Για Παιδιά",
+    "more": "Περισσότερα"
   },
   "brand": {
     "copyLogoSvg": "Αντιγραφή Logo SVG",
@@ -62,6 +64,7 @@
     "logoWithName": "Λογότυπο με όνομα",
     "forLightBackgrounds": "Για ανοιχτόχρωμα φόντα",
     "forDarkBackgrounds": "Για σκούρα φόντα",
+    "animatedLogos": "Κινούμενα Λογότυπα",
     "brandColors": "Χρώματα μάρκας",
     "clickToCopy": "Κάντε κλικ για αντιγραφή hex τιμής",
     "primary": "Κύριο χρώμα μάρκας",
@@ -141,7 +144,11 @@
     "mcpCommandPlaceholder": "npx -y @mcp/server-name",
     "mcpToolsPlaceholder": "tool1, tool2",
     "add": "Προσθήκη",
-    "advancedOptions": "Προχωρημένες Επιλογές",
+    "workflowLink": "Σύνδεσμος Ροής Εργασίας",
+    "workflowLinkDescription": "URL όπου οι χρήστες μπορούν να δοκιμάσουν αυτή τη ροή εργασίας",
+    "workflowLinkCreateNote": "Αποθηκεύστε πρώτα το prompt, μετά προσθέστε συνδεδεμένα prompts για να ενεργοποιήσετε αυτό το πεδίο.",
+    "workflowLinkPlaceholder": "https://example.com/workflow-demo",
+    "advancedOptions": "Σύνθετες Επιλογές",
     "searchContributors": "Αναζήτηση με όνομα χρήστη...",
     "noUsersFound": "Δεν βρέθηκαν χρήστες",
     "worksBestWith": "Λειτουργεί καλύτερα με",
@@ -834,6 +841,32 @@
     "profileUrl": "URL προφίλ σας",
     "email": "Email",
     "emailCannotChange": "Το email δεν μπορεί να αλλάξει",
+    "bio": "Βιογραφικό",
+    "bioPlaceholder": "Πείτε μας λίγα για εσάς...",
+    "bioCharCount": "{count}/250",
+    "customLinks": "Σύνδεσμοι",
+    "customLinksDescription": "Προσθέστε συνδέσμους στα κοινωνικά σας προφίλ και ιστοσελίδες",
+    "addLink": "Προσθήκη Συνδέσμου",
+    "linkType": "Τύπος",
+    "linkUrl": "URL",
+    "linkLabel": "Ετικέτα (προαιρετικό)",
+    "linkLabelPlaceholder": "Προσαρμοσμένη ετικέτα",
+    "removeLink": "Αφαίρεση",
+    "maxLinksReached": "Μέγιστο 5 σύνδεσμοι επιτρέπονται",
+    "invalidUrl": "Παρακαλώ εισάγετε έγκυρο URL",
+    "linkTypes": {
+      "website": "Ιστοσελίδα",
+      "github": "GitHub",
+      "twitter": "X (Twitter)",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "twitch": "Twitch",
+      "discord": "Discord",
+      "mastodon": "Mastodon",
+      "bluesky": "Bluesky",
+      "sponsor": "Χορηγός"
+    },
     "saveChanges": "Αποθήκευση αλλαγών",
     "profileUpdated": "Το προφίλ ενημερώθηκε επιτυχώς",
     "usernameTaken": "Αυτό το όνομα χρήστη χρησιμοποιείται ήδη"
@@ -846,6 +879,13 @@
     "noPromptsInFeed": "Δεν υπάρχουν prompts στο feed σας",
     "subscribeToCategories": "Εγγραφείτε σε κατηγορίες για να δείτε prompts εδώ",
     "viewAllCategories": "Προβολή όλων των κατηγοριών"
+  },
+  "workflows": {
+    "title": "Ροές εργασίας",
+    "description": "Prompts με διαδοχικές ροές και συνδέσεις",
+    "noWorkflows": "Δεν υπάρχουν ακόμα ροές εργασίας",
+    "noWorkflowsDescription": "Οι ροές εργασίας είναι prompts που συνδέονται με άλλα prompts σε ακολουθία. Δημιουργήστε ένα prompt και προσθέστε συνδέσεις για να δημιουργήσετε μια ροή εργασίας.",
+    "browsePrompts": "Περιήγηση Prompts"
   },
   "collection": {
     "title": "Η Συλλογή μου",
@@ -893,9 +933,8 @@
       "harvardUniversity": "Πανεπιστήμιο Harvard",
       "columbiaUniversity": "Πανεπιστήμιο Columbia",
       "olympicCollege": "Olympic College",
-      "citedIn": "Αναφέρεται σε",
       "referencedIn": "Αναφέρεται σε",
-      "arxivPaper": "Άρθρο arXiv",
+      "academicCitations": "Ακαδημαϊκές Αναφορές",
       "githubBlog": "GitHub Blog",
       "mostLikedDataset": "#1 Πιο αγαπημένο Dataset στο Hugging Face",
       "githubStars": "Αστέρια GitHub",
@@ -907,7 +946,7 @@
       "becomeSponsor": "Υποστήριξε την Κοινότητα",
       "firstEver": "Η πρώτη βιβλιοθήκη Prompts στον κόσμο",
       "releasedOn": "Κυκλοφόρησε στις 5 Δεκεμβρίου 2022",
-      "lovedByOpenAI": "Αγαπημένο από τους ιδρυτές της OpenAI"
+      "lovedByPioneers": "Αγαπημένο από τους πρωτοπόρους της AI"
     }
   },
   "notifications": {
@@ -1111,6 +1150,14 @@
     "terms": "Όροι",
     "support": "Υποστήριξη"
   },
+  "cookies": {
+    "message": "Χρησιμοποιούμε cookies για αναλύσεις.",
+    "accept": "Αποδοχή",
+    "reject": "Απόρριψη",
+    "confirmMessage": "Είστε σίγουροι; Οι αναλύσεις μας βοηθούν να βελτιωθούμε. Αυτή η εφαρμογή είναι πλήρως ανοιχτού κώδικα.",
+    "nevermind": "Ακύρωση",
+    "confirmReject": "Ναι, απόρριψη"
+  },
   "support": {
     "title": "Υποστήριξη",
     "description": "Βρείτε απαντήσεις σε συχνές ερωτήσεις ή λάβετε βοήθεια από την κοινότητά μας.",
@@ -1187,8 +1234,8 @@
   },
   "connectedPrompts": {
     "title": "Ροή Prompts",
-    "description": "Ορισμένα prompts λειτουργούν ως ροές εργασίας πολλαπλών βημάτων. Συνδέστε τα prompts σας για να δημιουργήσετε μια ακολουθία.",
     "addPromptFlow": "Αυτό το prompt έχει επόμενο βήμα",
+    "testWorkflow": "Εκτέλεση Ροής Εργασίας",
     "addPrevious": "Προσθήκη Προηγούμενου",
     "addNext": "Προσθήκη Επόμενου",
     "addPreviousTitle": "Προσθήκη Προηγούμενου Prompt",
@@ -1198,6 +1245,7 @@
     "noConnections": "Δεν υπάρχουν συνδεδεμένα prompts ακόμα. Προσθέστε συνδέσεις για να δημιουργήσετε μια αλυσίδα prompts.",
     "previousSteps": "Προηγούμενα βήματα",
     "nextSteps": "Επόμενα βήματα",
+    "fullFlow": "Πλήρης ροή εργασίας",
     "searchPrompt": "Αναζήτηση Prompt",
     "searchPlaceholder": "Αναζήτηση με τίτλο...",
     "selectedPrompt": "Επιλεγμένο Prompt",
@@ -1211,7 +1259,19 @@
     "connectionAdded": "Η σύνδεση προστέθηκε επιτυχώς",
     "connectionDeleted": "Η σύνδεση διαγράφηκε",
     "deleteFailed": "Αποτυχία διαγραφής σύνδεσης",
-    "noResults": "Δεν βρέθηκαν prompts"
+    "noResults": "Δεν βρέθηκαν prompts",
+    "outputText": "κείμενο",
+    "outputImage": "εικόνα",
+    "outputVideo": "βίντεο",
+    "outputAudio": "ήχος",
+    "outputStructured": "δομημένο",
+    "outputSkill": "δεξιότητα",
+    "inputImage": "εικόνα",
+    "inputVideo": "βίντεο",
+    "inputDocument": "έγγραφο",
+    "inputImages": "{count} εικόνες",
+    "inputVideos": "{count} βίντεο",
+    "inputDocuments": "{count} έγγραφα"
   },
   "promptWritingGuide": {
     "title": "Πώς να Γράφετε Εξαιρετικά Prompts",
@@ -1400,10 +1460,11 @@
     "academicCategoryTitle": "Ακαδημαϊκή Αναγνώριση",
     "communityCategoryTitle": "Κοινότητα & GitHub",
     "featuredForbes": "Παρουσιάστηκε στο <link>Forbes</link>",
+    "featuredTagesspiegel": "Featured in <link>Der Tagesspiegel</link>",
     "referencedHarvard": "Αναφέρθηκε από το <link>Πανεπιστήμιο Harvard</link>",
     "referencedColumbia": "Αναφέρθηκε από το <link>Πανεπιστήμιο Columbia</link>",
     "referencedOlympic": "Αναφέρθηκε από το <link>Olympic College</link>",
-    "citedArxiv": "Αναφέρθηκε σε <link>ερευνητικό άρθρο arXiv</link>",
+    "googleScholarCitations": "<link>Πάνω από 40 ακαδημαϊκές αναφορές</link> στο Google Scholar",
     "githubStars": "<link>141k+ αστέρια GitHub</link>, το πιο αστεροσημειωμένο αποθετήριο prompts",
     "githubStaffPick": "Επιλέχθηκε ως <link>GitHub Staff Pick</link>",
     "referencedGithubBlog": "Αναφέρεται στο <link>GitHub Blog</link>",

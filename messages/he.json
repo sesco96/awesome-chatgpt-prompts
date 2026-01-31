@@ -38,7 +38,8 @@
     "feed": "פיד",
     "promptmasters": "מאסטרים",
     "prompts": "פרומפטים",
-    "skills": "מיומנויות",
+    "skills": "כישורים",
+    "workflows": "תהליכי עבודה",
     "categories": "קטגוריות",
     "tags": "תגיות",
     "settings": "הגדרות",
@@ -50,7 +51,8 @@
     "ide": "Typed-Prompts IDE",
     "developers": "מפתחים",
     "book": "ספר",
-    "forKids": "לילדים"
+    "forKids": "לילדים",
+    "more": "עוד"
   },
   "brand": {
     "copyLogoSvg": "העתק לוגו SVG",
@@ -62,6 +64,7 @@
     "logoWithName": "לוגו עם שם",
     "forLightBackgrounds": "לרקעים בהירים",
     "forDarkBackgrounds": "לרקעים כהים",
+    "animatedLogos": "לוגואים מונפשים",
     "brandColors": "צבעי מותג",
     "clickToCopy": "לחץ להעתקת ערך hex",
     "primary": "צבע מותג ראשי",
@@ -141,6 +144,10 @@
     "mcpCommandPlaceholder": "npx -y @mcp/server-name",
     "mcpToolsPlaceholder": "tool1, tool2",
     "add": "הוסף",
+    "workflowLink": "קישור לתהליך עבודה",
+    "workflowLinkDescription": "כתובת URL שבה משתמשים יכולים לבדוק את תהליך העבודה הזה",
+    "workflowLinkCreateNote": "שמור קודם את הפרומפט, ואז הוסף פרומפטים מקושרים כדי להפעיל שדה זה.",
+    "workflowLinkPlaceholder": "https://example.com/workflow-demo",
     "advancedOptions": "אפשרויות מתקדמות",
     "searchContributors": "חפש לפי שם משתמש...",
     "noUsersFound": "לא נמצאו משתמשים",
@@ -834,6 +841,32 @@
     "profileUrl": "כתובת הפרופיל שלך",
     "email": "אימייל",
     "emailCannotChange": "לא ניתן לשנות את האימייל",
+    "bio": "אודות",
+    "bioPlaceholder": "ספר לנו קצת על עצמך...",
+    "bioCharCount": "{count}/250",
+    "customLinks": "קישורים",
+    "customLinksDescription": "הוסף קישורים לפרופילים החברתיים ולאתרים שלך",
+    "addLink": "הוסף קישור",
+    "linkType": "סוג",
+    "linkUrl": "כתובת",
+    "linkLabel": "תווית (אופציונלי)",
+    "linkLabelPlaceholder": "תווית מותאמת",
+    "removeLink": "הסר",
+    "maxLinksReached": "מקסימום 5 קישורים",
+    "invalidUrl": "אנא הזן כתובת תקינה",
+    "linkTypes": {
+      "website": "אתר",
+      "github": "GitHub",
+      "twitter": "X (Twitter)",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "twitch": "Twitch",
+      "discord": "Discord",
+      "mastodon": "Mastodon",
+      "bluesky": "Bluesky",
+      "sponsor": "נותן חסות"
+    },
     "saveChanges": "שמור שינויים",
     "profileUpdated": "הפרופיל עודכן בהצלחה",
     "usernameTaken": "שם המשתמש הזה כבר תפוס"
@@ -846,6 +879,13 @@
     "noPromptsInFeed": "אין פרומפטים בפיד שלך",
     "subscribeToCategories": "הירשם לקטגוריות כדי לראות פרומפטים כאן",
     "viewAllCategories": "צפה בכל הקטגוריות"
+  },
+  "workflows": {
+    "title": "תהליכי עבודה",
+    "description": "פרומפטים עם זרימות וחיבורים רציפים",
+    "noWorkflows": "עדיין אין תהליכי עבודה",
+    "noWorkflowsDescription": "תהליכי עבודה הם פרומפטים שמתחברים לפרומפטים אחרים ברצף. צור פרומפט והוסף חיבורים כדי לבנות תהליך עבודה.",
+    "browsePrompts": "עיין בפרומפטים"
   },
   "collection": {
     "title": "האוסף שלי",
@@ -893,9 +933,8 @@
       "harvardUniversity": "אוניברסיטת הרוורד",
       "columbiaUniversity": "אוניברסיטת קולומביה",
       "olympicCollege": "Olympic College",
-      "citedIn": "צוטט ב",
       "referencedIn": "מוזכר ב",
-      "arxivPaper": "מאמר arXiv",
+      "academicCitations": "ציטוטים אקדמיים",
       "githubBlog": "בלוג GitHub",
       "mostLikedDataset": "מאגר הנתונים האהוב ביותר ב-Hugging Face",
       "githubStars": "כוכבי GitHub",
@@ -907,7 +946,7 @@
       "becomeSponsor": "תמוך בקהילה",
       "firstEver": "ספריית הפרומפטים הראשונה בעולם",
       "releasedOn": "שוחררה ב-5 בדצמבר 2022",
-      "lovedByOpenAI": "אהוב על ידי מייסדי OpenAI"
+      "lovedByPioneers": "אהוב על ידי חלוצי AI"
     }
   },
   "notifications": {
@@ -1111,6 +1150,14 @@
     "terms": "תנאים",
     "support": "תמיכה"
   },
+  "cookies": {
+    "message": "אנו משתמשים בעוגיות לניתוח.",
+    "accept": "קבל",
+    "reject": "דחה",
+    "confirmMessage": "בטוח? ניתוח עוזר לנו להשתפר. האפליקציה הזו היא קוד פתוח לחלוטין.",
+    "nevermind": "ביטול",
+    "confirmReject": "כן, דחה"
+  },
   "support": {
     "title": "תמיכה",
     "description": "מצאו תשובות לשאלות נפוצות או קבלו עזרה מהקהילה שלנו.",
@@ -1187,8 +1234,8 @@
   },
   "connectedPrompts": {
     "title": "זרימת פרומפטים",
-    "description": "חלק מהפרומפטים עובדים כתהליכי עבודה מרובי שלבים. חבר את הפרומפטים שלך ליצירת רצף.",
     "addPromptFlow": "לפרומפט הזה יש שלב הבא",
+    "testWorkflow": "הפעל תהליך עבודה",
     "addPrevious": "הוסף קודם",
     "addNext": "הוסף הבא",
     "addPreviousTitle": "הוסף פרומפט קודם",
@@ -1197,7 +1244,8 @@
     "addNextDescription": "בחר פרומפט שבא אחרי זה בתהליך העבודה.",
     "noConnections": "אין עדיין פרומפטים מקושרים. הוסף קישורים ליצירת שרשרת פרומפטים.",
     "previousSteps": "שלבים קודמים",
-    "nextSteps": "שלבים הבאים",
+    "nextSteps": "השלבים הבאים",
+    "fullFlow": "תהליך עבודה מלא",
     "searchPrompt": "חפש פרומפט",
     "searchPlaceholder": "חפש לפי כותרת...",
     "selectedPrompt": "פרומפט נבחר",
@@ -1211,7 +1259,19 @@
     "connectionAdded": "הקישור נוסף בהצלחה",
     "connectionDeleted": "הקישור נמחק",
     "deleteFailed": "מחיקת הקישור נכשלה",
-    "noResults": "לא נמצאו פרומפטים"
+    "noResults": "לא נמצאו פרומפטים",
+    "outputText": "טקסט",
+    "outputImage": "תמונה",
+    "outputVideo": "וידאו",
+    "outputAudio": "אודיו",
+    "outputStructured": "מובנה",
+    "outputSkill": "מיומנות",
+    "inputImage": "תמונה",
+    "inputVideo": "וידאו",
+    "inputDocument": "מסמך",
+    "inputImages": "{count} תמונות",
+    "inputVideos": "{count} סרטונים",
+    "inputDocuments": "{count} מסמכים"
   },
   "promptWritingGuide": {
     "title": "איך לכתוב פרומפטים מעולים",
@@ -1400,10 +1460,11 @@
     "academicCategoryTitle": "הכרה אקדמית",
     "communityCategoryTitle": "קהילה ו-GitHub",
     "featuredForbes": "הוצג ב-<link>Forbes</link>",
+    "featuredTagesspiegel": "Featured in <link>Der Tagesspiegel</link>",
     "referencedHarvard": "צוטט על ידי <link>אוניברסיטת הרווארד</link>",
     "referencedColumbia": "צוטט על ידי <link>אוניברסיטת קולומביה</link>",
     "referencedOlympic": "צוטט על ידי <link>Olympic College</link>",
-    "citedArxiv": "צוטט ב-<link>מאמר מחקר arXiv</link>",
+    "googleScholarCitations": "<link>מעל 40 ציטוטים אקדמיים</link> ב-Google Scholar",
     "githubStars": "<link>141k+ כוכבי GitHub</link>, מאגר הפרומפטים עם הכי הרבה כוכבים",
     "githubStaffPick": "נבחר כ-<link>GitHub Staff Pick</link>",
     "referencedGithubBlog": "מוזכר ב<link>בלוג GitHub</link>",

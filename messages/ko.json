@@ -39,6 +39,7 @@
     "promptmasters": "프롬프트마스터",
     "prompts": "프롬프트",
     "skills": "스킬",
+    "workflows": "워크플로우",
     "categories": "카테고리",
     "tags": "태그",
     "settings": "설정",
@@ -50,7 +51,8 @@
     "ide": "Typed-Prompts IDE",
     "developers": "개발자",
     "book": "책",
-    "forKids": "어린이용"
+    "forKids": "어린이용",
+    "more": "더 보기"
   },
   "brand": {
     "copyLogoSvg": "로고 SVG 복사",
@@ -62,6 +64,7 @@
     "logoWithName": "이름이 있는 로고",
     "forLightBackgrounds": "밝은 배경용",
     "forDarkBackgrounds": "어두운 배경용",
+    "animatedLogos": "애니메이션 로고",
     "brandColors": "브랜드 색상",
     "clickToCopy": "클릭하여 hex 값 복사",
     "primary": "기본 브랜드 색상",
@@ -141,6 +144,10 @@
     "mcpCommandPlaceholder": "npx -y @mcp/server-name",
     "mcpToolsPlaceholder": "tool1, tool2",
     "add": "추가",
+    "workflowLink": "워크플로 링크",
+    "workflowLinkDescription": "사용자가 이 워크플로를 테스트할 수 있는 URL",
+    "workflowLinkCreateNote": "먼저 프롬프트를 저장한 다음 연결된 프롬프트를 추가하여 이 필드를 활성화하세요.",
+    "workflowLinkPlaceholder": "https://example.com/workflow-demo",
     "advancedOptions": "고급 옵션",
     "searchContributors": "사용자명으로 검색...",
     "noUsersFound": "사용자를 찾을 수 없습니다",
@@ -834,6 +841,32 @@
     "profileUrl": "프로필 URL",
     "email": "이메일",
     "emailCannotChange": "이메일은 변경할 수 없습니다",
+    "bio": "소개",
+    "bioPlaceholder": "자신에 대해 간단히 소개해주세요...",
+    "bioCharCount": "{count}/250",
+    "customLinks": "링크",
+    "customLinksDescription": "소셜 프로필 및 웹사이트 링크를 추가하세요",
+    "addLink": "링크 추가",
+    "linkType": "유형",
+    "linkUrl": "URL",
+    "linkLabel": "레이블 (선택사항)",
+    "linkLabelPlaceholder": "사용자 지정 레이블",
+    "removeLink": "삭제",
+    "maxLinksReached": "최대 5개 링크까지 가능합니다",
+    "invalidUrl": "유효한 URL을 입력해주세요",
+    "linkTypes": {
+      "website": "웹사이트",
+      "github": "GitHub",
+      "twitter": "X (Twitter)",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "twitch": "Twitch",
+      "discord": "Discord",
+      "mastodon": "Mastodon",
+      "bluesky": "Bluesky",
+      "sponsor": "후원"
+    },
     "saveChanges": "변경 사항 저장",
     "profileUpdated": "프로필이 성공적으로 업데이트되었습니다",
     "usernameTaken": "이미 사용 중인 사용자명입니다"
@@ -846,6 +879,13 @@
     "noPromptsInFeed": "피드에 프롬프트가 없습니다",
     "subscribeToCategories": "카테고리를 구독하여 여기서 프롬프트를 확인하세요",
     "viewAllCategories": "모든 카테고리 보기"
+  },
+  "workflows": {
+    "title": "워크플로우",
+    "description": "순차적 흐름과 연결이 있는 프롬프트",
+    "noWorkflows": "아직 워크플로우가 없습니다",
+    "noWorkflowsDescription": "워크플로우는 다른 프롬프트에 순차적으로 연결되는 프롬프트입니다. 프롬프트를 만들고 연결을 추가하여 워크플로우를 구축하세요.",
+    "browsePrompts": "프롬프트 둘러보기"
   },
   "collection": {
     "title": "내 컬렉션",
@@ -893,9 +933,8 @@
       "harvardUniversity": "하버드 대학교",
       "columbiaUniversity": "컬럼비아 대학교",
       "olympicCollege": "올림픽 칼리지",
-      "citedIn": "인용됨",
       "referencedIn": "참조됨",
-      "arxivPaper": "arXiv 논문",
+      "academicCitations": "학술 인용",
       "githubBlog": "GitHub 블로그",
       "mostLikedDataset": "Hugging Face에서 #1 가장 많이 좋아요 받은 데이터셋",
       "githubStars": "GitHub 스타",
@@ -907,7 +946,7 @@
       "becomeSponsor": "커뮤니티 지원",
       "firstEver": "세계 최초의 프롬프트 라이브러리",
       "releasedOn": "2022년 12월 5일 출시",
-      "lovedByOpenAI": "OpenAI 창립자들이 사랑하는"
+      "lovedByPioneers": "AI 선구자들이 사랑하는"
     }
   },
   "notifications": {
@@ -1111,6 +1150,14 @@
     "terms": "약관",
     "support": "지원"
   },
+  "cookies": {
+    "message": "분석을 위해 쿠키를 사용합니다.",
+    "accept": "수락",
+    "reject": "거부",
+    "confirmMessage": "정말요? 분석은 개선에 도움이 됩니다. 이 앱은 완전히 오픈 소스입니다.",
+    "nevermind": "취소",
+    "confirmReject": "네, 거부합니다"
+  },
   "support": {
     "title": "지원",
     "description": "자주 묻는 질문에 대한 답변을 찾거나 커뮤니티의 도움을 받으세요.",
@@ -1187,8 +1234,8 @@
   },
   "connectedPrompts": {
     "title": "프롬프트 흐름",
-    "description": "일부 프롬프트는 다단계 워크플로로 작동합니다. 프롬프트를 연결하여 시퀀스를 만드세요.",
     "addPromptFlow": "이 프롬프트에는 다음 단계가 있습니다",
+    "testWorkflow": "워크플로 실행",
     "addPrevious": "이전 추가",
     "addNext": "다음 추가",
     "addPreviousTitle": "이전 프롬프트 추가",
@@ -1198,6 +1245,7 @@
     "noConnections": "아직 연결된 프롬프트가 없습니다. 프롬프트 체인을 만들려면 연결을 추가하세요.",
     "previousSteps": "이전 단계",
     "nextSteps": "다음 단계",
+    "fullFlow": "전체 흐름",
     "searchPrompt": "프롬프트 검색",
     "searchPlaceholder": "제목으로 검색...",
     "selectedPrompt": "선택된 프롬프트",
@@ -1211,7 +1259,19 @@
     "connectionAdded": "연결이 성공적으로 추가되었습니다",
     "connectionDeleted": "연결이 삭제되었습니다",
     "deleteFailed": "연결 삭제에 실패했습니다",
-    "noResults": "프롬프트를 찾을 수 없습니다"
+    "noResults": "프롬프트를 찾을 수 없습니다",
+    "outputText": "텍스트",
+    "outputImage": "이미지",
+    "outputVideo": "비디오",
+    "outputAudio": "오디오",
+    "outputStructured": "구조화",
+    "outputSkill": "스킬",
+    "inputImage": "이미지",
+    "inputVideo": "비디오",
+    "inputDocument": "문서",
+    "inputImages": "{count}개 이미지",
+    "inputVideos": "{count}개 비디오",
+    "inputDocuments": "{count}개 문서"
   },
   "promptWritingGuide": {
     "title": "좋은 프롬프트 작성법",
@@ -1400,10 +1460,11 @@
     "academicCategoryTitle": "학술 인정",
     "communityCategoryTitle": "커뮤니티 & GitHub",
     "featuredForbes": "<link>Forbes</link>에 소개됨",
+    "featuredTagesspiegel": "Featured in <link>Der Tagesspiegel</link>",
     "referencedHarvard": "<link>하버드 대학교</link>에서 참조됨",
     "referencedColumbia": "<link>컬럼비아 대학교</link>에서 참조됨",
     "referencedOlympic": "<link>Olympic College</link>에서 참조됨",
-    "citedArxiv": "<link>arXiv 연구 논문</link>에서 인용됨",
+    "googleScholarCitations": "Google Scholar에서 <link>40개 이상의 학술 인용</link>",
     "githubStars": "<link>141k+ GitHub 스타</link>, 가장 많은 스타를 받은 프롬프트 저장소",
     "githubStaffPick": "<link>GitHub Staff Pick</link>으로 선정",
     "referencedGithubBlog": "<link>GitHub 블로그</link>에서 참조됨",

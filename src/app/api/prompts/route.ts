@@ -28,6 +28,7 @@ const promptSchema = z.object({
     command: z.string(),
     tools: z.array(z.string()).optional(),
   })).optional(),
+  workflowLink: z.string().url().optional().or(z.literal("")),
 });
 
 // Create prompt
@@ -51,7 +52,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const { title, description, content, type, structuredFormat, categoryId, tagIds, contributorIds, isPrivate, mediaUrl, requiresMediaUpload, requiredMediaType, requiredMediaCount, bestWithModels, bestWithMCP } = parsed.data;
+    const { title, description, content, type, structuredFormat, categoryId, tagIds, contributorIds, isPrivate, mediaUrl, requiresMediaUpload, requiredMediaType, requiredMediaCount, bestWithModels, bestWithMCP, workflowLink } = parsed.data;
 
     // Check if user is flagged (for auto-delisting and daily limit)
     const currentUser = await db.user.findUnique({
@@ -183,6 +184,7 @@ export async function POST(request: Request) {
         requiredMediaCount: requiresMediaUpload ? requiredMediaCount : null,
         bestWithModels: bestWithModels || [],
         bestWithMCP: bestWithMCP || [],
+        workflowLink: workflowLink || null,
         authorId: session.user.id,
         categoryId: categoryId || null,
         // Auto-delist prompts from flagged users
@@ -319,6 +321,9 @@ export async function GET(request: Request) {
       isPrivate: false,
       isUnlisted: false, // Exclude unlisted prompts from public API
       deletedAt: null, // Exclude soft-deleted prompts
+      // Exclude intermediate flow prompts (only show first prompts or standalone)
+      // Note: "related" connections are AI-suggested similar prompts, not flow connections
+      incomingConnections: { none: { label: { not: "related" } } },
     };
 
     if (type) {
@@ -391,7 +396,12 @@ export async function GET(request: Request) {
             },
           },
           _count: {
-            select: { votes: true, contributors: true },
+            select: {
+              votes: true,
+              contributors: true,
+              outgoingConnections: { where: { label: { not: "related" } } },
+              incomingConnections: { where: { label: { not: "related" } } },
+            },
           },
         },
       }),

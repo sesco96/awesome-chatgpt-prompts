@@ -38,7 +38,8 @@
     "feed": "Feed",
     "promptmasters": "Promptmasters",
     "prompts": "Prompts",
-    "skills": "Skills",
+    "skills": "Fähigkeiten",
+    "workflows": "Workflows",
     "categories": "Kategorien",
     "tags": "Tags",
     "settings": "Einstellungen",
@@ -50,7 +51,8 @@
     "ide": "Typed-Prompts IDE",
     "developers": "Entwickler",
     "book": "Buch",
-    "forKids": "Für Kinder"
+    "forKids": "Für Kinder",
+    "more": "Mehr"
   },
   "brand": {
     "copyLogoSvg": "Logo SVG kopieren",
@@ -62,6 +64,7 @@
     "logoWithName": "Logo mit Namen",
     "forLightBackgrounds": "Für helle Hintergründe",
     "forDarkBackgrounds": "Für dunkle Hintergründe",
+    "animatedLogos": "Animierte Logos",
     "brandColors": "Markenfarben",
     "clickToCopy": "Klicken zum Kopieren des Hex-Werts",
     "primary": "Primäre Markenfarbe",
@@ -141,6 +144,10 @@
     "mcpCommandPlaceholder": "npx -y @mcp/server-name",
     "mcpToolsPlaceholder": "tool1, tool2",
     "add": "Hinzufügen",
+    "workflowLink": "Workflow-Link",
+    "workflowLinkDescription": "Eine URL, wo Benutzer diesen Workflow testen oder demonstrieren können (wird angezeigt, wenn der Prompt vorherige/nächste Schritte hat)",
+    "workflowLinkCreateNote": "Speichern Sie zuerst den Prompt, dann fügen Sie verbundene Prompts (vorherige/nächste Schritte) hinzu, um dieses Feld zu aktivieren.",
+    "workflowLinkPlaceholder": "https://example.com/workflow-demo",
     "advancedOptions": "Erweiterte Optionen",
     "searchContributors": "Nach Benutzernamen suchen...",
     "noUsersFound": "Keine Benutzer gefunden",
@@ -834,6 +841,32 @@
     "profileUrl": "Ihre Profil-URL",
     "email": "E-Mail",
     "emailCannotChange": "E-Mail kann nicht geändert werden",
+    "bio": "Bio",
+    "bioPlaceholder": "Erzählen Sie uns etwas über sich...",
+    "bioCharCount": "{count}/250",
+    "customLinks": "Links",
+    "customLinksDescription": "Fügen Sie Links zu Ihren sozialen Profilen und Websites hinzu",
+    "addLink": "Link hinzufügen",
+    "linkType": "Typ",
+    "linkUrl": "URL",
+    "linkLabel": "Bezeichnung (optional)",
+    "linkLabelPlaceholder": "Benutzerdefinierte Bezeichnung",
+    "removeLink": "Entfernen",
+    "maxLinksReached": "Maximal 5 Links erlaubt",
+    "invalidUrl": "Bitte geben Sie eine gültige URL ein",
+    "linkTypes": {
+      "website": "Website",
+      "github": "GitHub",
+      "twitter": "X (Twitter)",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "twitch": "Twitch",
+      "discord": "Discord",
+      "mastodon": "Mastodon",
+      "bluesky": "Bluesky",
+      "sponsor": "Sponsor"
+    },
     "saveChanges": "Änderungen speichern",
     "profileUpdated": "Profil erfolgreich aktualisiert",
     "usernameTaken": "Dieser Benutzername ist bereits vergeben"
@@ -846,6 +879,13 @@
     "noPromptsInFeed": "Keine Prompts in Ihrem Feed",
     "subscribeToCategories": "Abonnieren Sie Kategorien, um hier Prompts zu sehen",
     "viewAllCategories": "Alle Kategorien anzeigen"
+  },
+  "workflows": {
+    "title": "Workflows",
+    "description": "Prompts mit sequentiellen Abläufen und Verbindungen",
+    "noWorkflows": "Noch keine Workflows",
+    "noWorkflowsDescription": "Workflows sind Prompts, die in einer Sequenz mit anderen Prompts verbunden sind. Erstellen Sie einen Prompt und fügen Sie Verbindungen hinzu, um einen Workflow zu erstellen.",
+    "browsePrompts": "Prompts durchsuchen"
   },
   "collection": {
     "title": "Meine Sammlung",
@@ -893,9 +933,8 @@
       "harvardUniversity": "Harvard University",
       "columbiaUniversity": "Columbia University",
       "olympicCollege": "Olympic College",
-      "citedIn": "Zitiert in",
       "referencedIn": "Erwähnt in",
-      "arxivPaper": "arXiv Paper",
+      "academicCitations": "Akademische Zitierungen",
       "githubBlog": "GitHub Blog",
       "mostLikedDataset": "#1 Beliebtester Datensatz auf Hugging Face",
       "githubStars": "GitHub-Sterne",
@@ -907,7 +946,7 @@
       "becomeSponsor": "Community unterstützen",
       "firstEver": "Die allererste Prompt-Bibliothek",
       "releasedOn": "Veröffentlicht am 5. Dezember 2022",
-      "lovedByOpenAI": "Geliebt von OpenAI-Gründern"
+      "lovedByPioneers": "Geliebt von KI-Pionieren"
     }
   },
   "notifications": {
@@ -1111,6 +1150,14 @@
     "terms": "Nutzungsbedingungen",
     "support": "Support"
   },
+  "cookies": {
+    "message": "Wir verwenden Cookies für Analysen.",
+    "accept": "Akzeptieren",
+    "reject": "Ablehnen",
+    "confirmMessage": "Sind Sie sicher? Analysen helfen uns zu verbessern. Diese App ist vollständig Open Source.",
+    "nevermind": "Abbrechen",
+    "confirmReject": "Ja, ablehnen"
+  },
   "support": {
     "title": "Support",
     "description": "Finden Sie Antworten auf häufige Fragen oder erhalten Sie Hilfe von unserer Community.",
@@ -1187,8 +1234,8 @@
   },
   "connectedPrompts": {
     "title": "Prompt-Ablauf",
-    "description": "Einige Prompts funktionieren als mehrstufige Workflows. Verbinden Sie Ihre Prompts, um eine Sequenz zu erstellen.",
     "addPromptFlow": "Dieser Prompt hat einen nächsten Schritt",
+    "testWorkflow": "Workflow ausführen",
     "addPrevious": "Vorherigen hinzufügen",
     "addNext": "Nächsten hinzufügen",
     "addPreviousTitle": "Vorherigen Prompt hinzufügen",
@@ -1198,6 +1245,7 @@
     "noConnections": "Noch keine verbundenen Prompts. Fügen Sie Verbindungen hinzu, um eine Prompt-Kette zu erstellen.",
     "previousSteps": "Vorherige Schritte",
     "nextSteps": "Nächste Schritte",
+    "fullFlow": "Vollständiger Workflow",
     "searchPrompt": "Prompt suchen",
     "searchPlaceholder": "Nach Titel suchen...",
     "selectedPrompt": "Ausgewählter Prompt",
@@ -1211,7 +1259,19 @@
     "connectionAdded": "Verbindung erfolgreich hinzugefügt",
     "connectionDeleted": "Verbindung gelöscht",
     "deleteFailed": "Verbindung konnte nicht gelöscht werden",
-    "noResults": "Keine Prompts gefunden"
+    "noResults": "Keine Prompts gefunden",
+    "outputText": "Text",
+    "outputImage": "Bild",
+    "outputVideo": "Video",
+    "outputAudio": "Audio",
+    "outputStructured": "strukturiert",
+    "outputSkill": "Fähigkeit",
+    "inputImage": "Bild",
+    "inputVideo": "Video",
+    "inputDocument": "Dokument",
+    "inputImages": "{count} Bilder",
+    "inputVideos": "{count} Videos",
+    "inputDocuments": "{count} Dokumente"
   },
   "promptWritingGuide": {
     "title": "Wie Man Gute Prompts Schreibt",
@@ -1400,10 +1460,11 @@
     "academicCategoryTitle": "Akademische Anerkennung",
     "communityCategoryTitle": "Community & GitHub",
     "featuredForbes": "Vorgestellt in <link>Forbes</link>",
+    "featuredTagesspiegel": "Featured in <link>Der Tagesspiegel</link>",
     "referencedHarvard": "Referenziert von <link>Harvard University</link>",
     "referencedColumbia": "Referenziert von <link>Columbia University</link>",
     "referencedOlympic": "Referenziert von <link>Olympic College</link>",
-    "citedArxiv": "Zitiert in <link>arXiv-Forschungsarbeit</link>",
+    "googleScholarCitations": "<link>Über 40 akademische Zitierungen</link> auf Google Scholar",
     "githubStars": "<link>141k+ GitHub-Sterne</link>, meistbewertetes Prompt-Repository",
     "githubStaffPick": "Ausgewählt als <link>GitHub Staff Pick</link>",
     "referencedGithubBlog": "Erwähnt im <link>GitHub Blog</link>",

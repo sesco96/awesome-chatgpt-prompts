@@ -39,6 +39,7 @@
     "promptmasters": "پرامپت‌مسترها",
     "prompts": "پرامپت‌ها",
     "skills": "مهارت‌ها",
+    "workflows": "گردش کار",
     "categories": "دسته‌بندی‌ها",
     "tags": "برچسب‌ها",
     "settings": "تنظیمات",
@@ -50,7 +51,8 @@
     "ide": "Typed-Prompts IDE",
     "developers": "توسعه‌دهندگان",
     "book": "کتاب",
-    "forKids": "برای کودکان"
+    "forKids": "برای کودکان",
+    "more": "بیشتر"
   },
   "brand": {
     "copyLogoSvg": "کپی SVG لوگو",
@@ -62,6 +64,7 @@
     "logoWithName": "لوگو با نام",
     "forLightBackgrounds": "برای پس‌زمینه‌های روشن",
     "forDarkBackgrounds": "برای پس‌زمینه‌های تاریک",
+    "animatedLogos": "لوگوهای متحرک",
     "brandColors": "رنگ‌های برند",
     "clickToCopy": "برای کپی کد هگز کلیک کنید",
     "primary": "رنگ اصلی برند",
@@ -141,6 +144,10 @@
     "mcpCommandPlaceholder": "npx -y @mcp/server-name",
     "mcpToolsPlaceholder": "tool1, tool2",
     "add": "اضافه",
+    "workflowLink": "لینک گردش کار",
+    "workflowLinkDescription": "لینکی که کاربران می‌توانند این گردش کار را آزمایش کنند",
+    "workflowLinkCreateNote": "ابتدا پرامپت را ذخیره کنید، سپس پرامپت‌های متصل اضافه کنید.",
+    "workflowLinkPlaceholder": "https://example.com/workflow-demo",
     "advancedOptions": "گزینه‌های پیشرفته",
     "searchContributors": "جستجو بر اساس نام کاربری...",
     "noUsersFound": "کاربری یافت نشد",
@@ -834,6 +841,32 @@
     "profileUrl": "آدرس پروفایل شما",
     "email": "ایمیل",
     "emailCannotChange": "ایمیل قابل تغییر نیست",
+    "bio": "بیوگرافی",
+    "bioPlaceholder": "کمی درباره خودتان بگویید...",
+    "bioCharCount": "{count}/250",
+    "customLinks": "لینک‌ها",
+    "customLinksDescription": "لینک‌های پروفایل‌های اجتماعی و وب‌سایت‌های خود را اضافه کنید",
+    "addLink": "افزودن لینک",
+    "linkType": "نوع",
+    "linkUrl": "آدرس",
+    "linkLabel": "برچسب (اختیاری)",
+    "linkLabelPlaceholder": "برچسب سفارشی",
+    "removeLink": "حذف",
+    "maxLinksReached": "حداکثر ۵ لینک مجاز است",
+    "invalidUrl": "لطفاً یک آدرس معتبر وارد کنید",
+    "linkTypes": {
+      "website": "وب‌سایت",
+      "github": "GitHub",
+      "twitter": "X (Twitter)",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "twitch": "Twitch",
+      "discord": "Discord",
+      "mastodon": "Mastodon",
+      "bluesky": "Bluesky",
+      "sponsor": "حامی"
+    },
     "saveChanges": "ذخیره تغییرات",
     "profileUpdated": "پروفایل با موفقیت به‌روزرسانی شد",
     "usernameTaken": "این نام کاربری قبلاً گرفته شده"
@@ -846,6 +879,13 @@
     "noPromptsInFeed": "پرامپتی در فید شما نیست",
     "subscribeToCategories": "برای دیدن پرامپت‌ها، دسته‌بندی‌ها را دنبال کنید",
     "viewAllCategories": "مشاهده همه دسته‌بندی‌ها"
+  },
+  "workflows": {
+    "title": "گردش کار",
+    "description": "پرامپت‌ها با جریان‌ها و اتصالات ترتیبی",
+    "noWorkflows": "هنوز گردش کاری وجود ندارد",
+    "noWorkflowsDescription": "گردش کار پرامپت‌هایی هستند که به ترتیب به پرامپت‌های دیگر متصل می‌شوند. یک پرامپت ایجاد کنید و اتصالات اضافه کنید تا گردش کار بسازید.",
+    "browsePrompts": "مرور پرامپت‌ها"
   },
   "collection": {
     "title": "مجموعه من",
@@ -893,9 +933,8 @@
       "harvardUniversity": "دانشگاه هاروارد",
       "columbiaUniversity": "دانشگاه کلمبیا",
       "olympicCollege": "Olympic College",
-      "citedIn": "ارجاع داده شده در",
       "referencedIn": "ارجاع داده شده در",
-      "arxivPaper": "مقاله arXiv",
+      "academicCitations": "استنادهای آکادمیک",
       "githubBlog": "بلاگ GitHub",
       "mostLikedDataset": "پرلایک‌ترین دیتاست در Hugging Face",
       "githubStars": "ستاره‌های GitHub",
@@ -907,7 +946,7 @@
       "becomeSponsor": "از جامعه حمایت کنید",
       "firstEver": "اولین کتابخانه پرامپت",
       "releasedOn": "منتشر شده در ۵ دسامبر ۲۰۲۲",
-      "lovedByOpenAI": "مورد علاقه بنیان‌گذاران OpenAI"
+      "lovedByPioneers": "مورد علاقه پیشگامان هوش مصنوعی"
     }
   },
   "notifications": {
@@ -1111,6 +1150,14 @@
     "terms": "شرایط",
     "support": "پشتیبانی"
   },
+  "cookies": {
+    "message": "ما از کوکی‌ها برای تحلیل استفاده می‌کنیم.",
+    "accept": "پذیرش",
+    "reject": "رد",
+    "confirmMessage": "مطمئن هستید؟ تحلیل به ما کمک می‌کند بهبود یابیم. این برنامه کاملاً متن‌باز است.",
+    "nevermind": "انصراف",
+    "confirmReject": "بله، رد کن"
+  },
   "support": {
     "title": "پشتیبانی",
     "description": "پاسخ سوالات رایج را پیدا کنید یا از جامعه ما کمک بگیرید.",
@@ -1187,8 +1234,8 @@
   },
   "connectedPrompts": {
     "title": "جریان پرامپت",
-    "description": "برخی پرامپت‌ها به صورت جریان‌های کاری چند مرحله‌ای عمل می‌کنند. پرامپت‌هایتان را متصل کنید تا یک دنباله بسازید.",
     "addPromptFlow": "این پرامپت مرحله بعدی دارد",
+    "testWorkflow": "اجرای گردش کار",
     "addPrevious": "افزودن قبلی",
     "addNext": "افزودن بعدی",
     "addPreviousTitle": "افزودن پرامپت قبلی",
@@ -1198,6 +1245,7 @@
     "noConnections": "هنوز پرامپت متصلی نیست. اتصالاتی اضافه کنید تا یک زنجیره پرامپت بسازید.",
     "previousSteps": "مراحل قبلی",
     "nextSteps": "مراحل بعدی",
+    "fullFlow": "گردش کار کامل",
     "searchPrompt": "جستجوی پرامپت",
     "searchPlaceholder": "جستجو بر اساس عنوان...",
     "selectedPrompt": "پرامپت انتخاب شده",
@@ -1211,7 +1259,19 @@
     "connectionAdded": "اتصال با موفقیت اضافه شد",
     "connectionDeleted": "اتصال حذف شد",
     "deleteFailed": "حذف اتصال ناموفق بود",
-    "noResults": "پرامپتی یافت نشد"
+    "noResults": "پرامپتی یافت نشد",
+    "outputText": "متن",
+    "outputImage": "تصویر",
+    "outputVideo": "ویدیو",
+    "outputAudio": "صدا",
+    "outputStructured": "ساختاریافته",
+    "outputSkill": "مهارت",
+    "inputImage": "تصویر",
+    "inputVideo": "ویدیو",
+    "inputDocument": "سند",
+    "inputImages": "{count} تصویر",
+    "inputVideos": "{count} ویدیو",
+    "inputDocuments": "{count} سند"
   },
   "promptWritingGuide": {
     "title": "چگونه پرامپت‌های عالی بنویسیم",
@@ -1400,10 +1460,11 @@
     "academicCategoryTitle": "شناسایی دانشگاهی",
     "communityCategoryTitle": "جامعه و GitHub",
     "featuredForbes": "معرفی شده در <link>Forbes</link>",
+    "featuredTagesspiegel": "Featured in <link>Der Tagesspiegel</link>",
     "referencedHarvard": "ارجاع داده شده توسط <link>دانشگاه هاروارد</link>",
     "referencedColumbia": "ارجاع داده شده توسط <link>دانشگاه کلمبیا</link>",
     "referencedOlympic": "ارجاع داده شده توسط <link>Olympic College</link>",
-    "citedArxiv": "استناد شده در <link>مقاله تحقیقاتی arXiv</link>",
+    "googleScholarCitations": "<link>بیش از 40 استناد آکادمیک</link> در Google Scholar",
     "githubStars": "<link>141k+ ستاره GitHub</link>، پرستاره‌ترین مخزن پرامپت",
     "githubStaffPick": "انتخاب شده به عنوان <link>GitHub Staff Pick</link>",
     "referencedGithubBlog": "ارجاع داده شده در <link>بلاگ GitHub</link>",

@@ -116,7 +116,12 @@ function getCachedPrompts(
               },
             },
             _count: {
-              select: { votes: true, contributors: true },
+              select: {
+                votes: true,
+                contributors: true,
+                outgoingConnections: { where: { label: { not: "related" } } },
+                incomingConnections: { where: { label: { not: "related" } } },
+              },
             },
           },
         }),
@@ -189,6 +194,9 @@ export default async function PromptsPage({ searchParams }: PromptsPageProps) {
       isPrivate: false,
       isUnlisted: false, // Exclude unlisted prompts
       deletedAt: null, // Exclude soft-deleted prompts
+      // Exclude intermediate flow prompts (only show first prompts or standalone)
+      // Note: "related" connections are AI-suggested similar prompts, not flow connections
+      incomingConnections: { none: { label: { not: "related" } } },
     };
     
     if (params.q) {

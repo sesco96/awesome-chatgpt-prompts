@@ -39,6 +39,7 @@
     "promptmasters": "Promptmasters",
     "prompts": "提示词",
     "skills": "技能",
+    "workflows": "工作流程",
     "categories": "分类",
     "tags": "标签",
     "settings": "设置",
@@ -50,7 +51,8 @@
     "ide": "Typed-Prompts IDE",
     "developers": "开发者",
     "book": "书籍",
-    "forKids": "儿童版"
+    "forKids": "儿童版",
+    "more": "更多"
   },
   "brand": {
     "copyLogoSvg": "复制Logo SVG",
@@ -62,6 +64,7 @@
     "logoWithName": "带名称的标志",
     "forLightBackgrounds": "适用于浅色背景",
     "forDarkBackgrounds": "适用于深色背景",
+    "animatedLogos": "动态标志",
     "brandColors": "品牌颜色",
     "clickToCopy": "点击复制十六进制值",
     "primary": "主要品牌颜色",
@@ -138,6 +141,10 @@
     "mcpCommandPlaceholder": "npx -y @mcp/server-name",
     "mcpToolsPlaceholder": "tool1, tool2",
     "add": "添加",
+    "workflowLink": "工作流链接",
+    "workflowLinkDescription": "用户可以测试此工作流的URL",
+    "workflowLinkCreateNote": "先保存提示词，然后添加连接的提示词以启用此字段。",
+    "workflowLinkPlaceholder": "https://example.com/workflow-demo",
     "advancedOptions": "高级选项",
     "searchContributors": "按用户名搜索...",
     "noUsersFound": "未找到用户",
@@ -834,6 +841,32 @@
     "profileUrl": "您的主页链接",
     "email": "邮箱",
     "emailCannotChange": "邮箱无法更改",
+    "bio": "个人简介",
+    "bioPlaceholder": "介绍一下你自己...",
+    "bioCharCount": "{count}/250",
+    "customLinks": "链接",
+    "customLinksDescription": "添加您的社交资料和网站链接",
+    "addLink": "添加链接",
+    "linkType": "类型",
+    "linkUrl": "网址",
+    "linkLabel": "标签（可选）",
+    "linkLabelPlaceholder": "自定义标签",
+    "removeLink": "删除",
+    "maxLinksReached": "最多允许5个链接",
+    "invalidUrl": "请输入有效的网址",
+    "linkTypes": {
+      "website": "网站",
+      "github": "GitHub",
+      "twitter": "X (Twitter)",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "twitch": "Twitch",
+      "discord": "Discord",
+      "mastodon": "Mastodon",
+      "bluesky": "Bluesky",
+      "sponsor": "赞助"
+    },
     "saveChanges": "保存更改",
     "profileUpdated": "个人资料更新成功",
     "usernameTaken": "该用户名已被使用"
@@ -846,6 +879,13 @@
     "noPromptsInFeed": "您的订阅中暂无提示词",
     "subscribeToCategories": "订阅分类以在此查看提示词",
     "viewAllCategories": "查看所有分类"
+  },
+  "workflows": {
+    "title": "工作流程",
+    "description": "具有顺序流程和连接的提示词",
+    "noWorkflows": "暂无工作流程",
+    "noWorkflowsDescription": "工作流程是按顺序连接到其他提示词的提示词。创建一个提示词并添加连接以构建工作流程。",
+    "browsePrompts": "浏览提示词"
   },
   "collection": {
     "title": "我的收藏",
@@ -893,9 +933,8 @@
       "harvardUniversity": "哈佛大学",
       "columbiaUniversity": "哥伦比亚大学",
       "olympicCollege": "奥林匹克学院",
-      "citedIn": "被引用于",
       "referencedIn": "被引用于",
-      "arxivPaper": "arXiv 论文",
+      "academicCitations": "学术引用",
       "githubBlog": "GitHub 博客",
       "mostLikedDataset": "Hugging Face 上最受欢迎的数据集 #1",
       "githubStars": "GitHub 星标",
@@ -907,7 +946,7 @@
       "becomeSponsor": "支持社区",
       "firstEver": "世界首个提示词库",
       "releasedOn": "发布于2022年12月5日",
-      "lovedByOpenAI": "深受OpenAI创始人喜爱"
+      "lovedByPioneers": "深受AI先驱者喜爱"
     }
   },
   "notifications": {
@@ -1111,6 +1150,14 @@
     "terms": "条款",
     "support": "支持"
   },
+  "cookies": {
+    "message": "我们使用 Cookie 进行分析。",
+    "accept": "接受",
+    "reject": "拒绝",
+    "confirmMessage": "确定吗？分析帮助我们改进。此应用完全开源。",
+    "nevermind": "取消",
+    "confirmReject": "是的，拒绝"
+  },
   "support": {
     "title": "支持",
     "description": "查找常见问题的答案或从我们的社区获得帮助。",
@@ -1182,13 +1229,13 @@
     "keyRegenerated": "API 密钥重新生成成功",
     "keyRevoked": "API 密钥已撤销",
     "publicByDefault": "默认公开提示词",
-    "publicByDefaultDescription": "通过 MCP 保存提示词时，默认设为公开而非私有。",
+    "publicByDefaultDescription": "通过MCP保存提示词时，默认设为公开而非私有。",
     "settingUpdated": "设置已更新"
   },
   "connectedPrompts": {
     "title": "提示词流程",
-    "description": "某些提示词作为多步骤工作流运行。连接您的提示词以创建序列。",
     "addPromptFlow": "此提示词有下一步",
+    "testWorkflow": "运行工作流",
     "addPrevious": "添加上一个",
     "addNext": "添加下一个",
     "addPreviousTitle": "添加上一个提示词",
@@ -1198,6 +1245,7 @@
     "noConnections": "尚无关联提示词。添加关联以创建提示词链。",
     "previousSteps": "上一步",
     "nextSteps": "下一步",
+    "fullFlow": "完整流程",
     "searchPrompt": "搜索提示词",
     "searchPlaceholder": "按标题搜索...",
     "selectedPrompt": "已选提示词",
@@ -1211,7 +1259,19 @@
     "connectionAdded": "关联添加成功",
     "connectionDeleted": "关联已删除",
     "deleteFailed": "删除关联失败",
-    "noResults": "未找到提示词"
+    "noResults": "未找到提示词",
+    "outputText": "文本",
+    "outputImage": "图片",
+    "outputVideo": "视频",
+    "outputAudio": "音频",
+    "outputStructured": "结构化",
+    "outputSkill": "技能",
+    "inputImage": "图片",
+    "inputVideo": "视频",
+    "inputDocument": "文档",
+    "inputImages": "{count}张图片",
+    "inputVideos": "{count}个视频",
+    "inputDocuments": "{count}个文档"
   },
   "promptWritingGuide": {
     "title": "如何写出优秀的提示词",
@@ -1400,10 +1460,11 @@
     "academicCategoryTitle": "学术认可",
     "communityCategoryTitle": "社区与GitHub",
     "featuredForbes": "被<link>Forbes</link>报道",
+    "featuredTagesspiegel": "Featured in <link>Der Tagesspiegel</link>",
     "referencedHarvard": "被<link>哈佛大学</link>引用",
     "referencedColumbia": "被<link>哥伦比亚大学</link>引用",
     "referencedOlympic": "被<link>Olympic College</link>引用",
-    "citedArxiv": "在<link>arXiv研究论文</link>中被引用",
+    "googleScholarCitations": "Google Scholar上<link>40+学术引用</link>",
     "githubStars": "<link>141k+ GitHub星标</link>，星标最多的提示词仓库",
     "githubStaffPick": "被选为 <link>GitHub Staff Pick</link>",
     "referencedGithubBlog": "被 <link>GitHub 博客</link>引用",

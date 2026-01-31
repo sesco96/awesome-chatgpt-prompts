@@ -39,6 +39,7 @@
     "promptmasters": "Promptmaster",
     "prompts": "Prompt",
     "skills": "Competenze",
+    "workflows": "Flussi di lavoro",
     "categories": "Categorie",
     "tags": "Tag",
     "settings": "Impostazioni",
@@ -50,7 +51,8 @@
     "ide": "Typed-Prompts IDE",
     "developers": "Sviluppatori",
     "book": "Libro",
-    "forKids": "Per Bambini"
+    "forKids": "Per Bambini",
+    "more": "Altro"
   },
   "brand": {
     "copyLogoSvg": "Copia Logo SVG",
@@ -62,6 +64,7 @@
     "logoWithName": "Logo con nome",
     "forLightBackgrounds": "Per sfondi chiari",
     "forDarkBackgrounds": "Per sfondi scuri",
+    "animatedLogos": "Loghi Animati",
     "brandColors": "Colori del marchio",
     "clickToCopy": "Clicca per copiare il valore hex",
     "primary": "Colore primario del marchio",
@@ -141,6 +144,10 @@
     "mcpCommandPlaceholder": "npx -y @mcp/server-name",
     "mcpToolsPlaceholder": "tool1, tool2",
     "add": "Aggiungi",
+    "workflowLink": "Link del Workflow",
+    "workflowLinkDescription": "URL dove gli utenti possono testare questo workflow",
+    "workflowLinkCreateNote": "Salva prima il prompt, poi aggiungi prompt collegati per abilitare questo campo.",
+    "workflowLinkPlaceholder": "https://example.com/workflow-demo",
     "advancedOptions": "Opzioni Avanzate",
     "searchContributors": "Cerca per nome utente...",
     "noUsersFound": "Nessun utente trovato",
@@ -834,6 +841,32 @@
     "profileUrl": "URL del tuo profilo",
     "email": "Email",
     "emailCannotChange": "L'email non può essere modificata",
+    "bio": "Bio",
+    "bioPlaceholder": "Raccontaci un po' di te...",
+    "bioCharCount": "{count}/250",
+    "customLinks": "Link",
+    "customLinksDescription": "Aggiungi link ai tuoi profili social e siti web",
+    "addLink": "Aggiungi Link",
+    "linkType": "Tipo",
+    "linkUrl": "URL",
+    "linkLabel": "Etichetta (opzionale)",
+    "linkLabelPlaceholder": "Etichetta personalizzata",
+    "removeLink": "Rimuovi",
+    "maxLinksReached": "Massimo 5 link consentiti",
+    "invalidUrl": "Inserisci un URL valido",
+    "linkTypes": {
+      "website": "Sito Web",
+      "github": "GitHub",
+      "twitter": "X (Twitter)",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "twitch": "Twitch",
+      "discord": "Discord",
+      "mastodon": "Mastodon",
+      "bluesky": "Bluesky",
+      "sponsor": "Sponsor"
+    },
     "saveChanges": "Salva Modifiche",
     "profileUpdated": "Profilo aggiornato con successo",
     "usernameTaken": "Questo nome utente è già in uso"
@@ -846,6 +879,13 @@
     "noPromptsInFeed": "Nessun prompt nel tuo feed",
     "subscribeToCategories": "Iscriviti alle categorie per vedere i prompt qui",
     "viewAllCategories": "Vedi Tutte le Categorie"
+  },
+  "workflows": {
+    "title": "Flussi di lavoro",
+    "description": "Prompt con flussi e connessioni sequenziali",
+    "noWorkflows": "Ancora nessun flusso di lavoro",
+    "noWorkflowsDescription": "I flussi di lavoro sono prompt che si connettono ad altri prompt in sequenza. Crea un prompt e aggiungi connessioni per costruire un flusso di lavoro.",
+    "browsePrompts": "Sfoglia Prompt"
   },
   "collection": {
     "title": "La Mia Collezione",
@@ -893,9 +933,8 @@
       "harvardUniversity": "Università di Harvard",
       "columbiaUniversity": "Università di Columbia",
       "olympicCollege": "Olympic College",
-      "citedIn": "Citato in",
       "referencedIn": "Menzionato in",
-      "arxivPaper": "Articolo arXiv",
+      "academicCitations": "Citazioni Accademiche",
       "githubBlog": "GitHub Blog",
       "mostLikedDataset": "Dataset #1 Più Apprezzato su Hugging Face",
       "githubStars": "Stelle GitHub",
@@ -907,7 +946,7 @@
       "becomeSponsor": "Supporta la Community",
       "firstEver": "La prima libreria di prompt al mondo",
       "releasedOn": "Rilasciata il 5 dicembre 2022",
-      "lovedByOpenAI": "Amato dai fondatori di OpenAI"
+      "lovedByPioneers": "Amato dai pionieri dell'IA"
     }
   },
   "notifications": {
@@ -1111,6 +1150,14 @@
     "terms": "Termini",
     "support": "Supporto"
   },
+  "cookies": {
+    "message": "Utilizziamo cookie per l'analisi.",
+    "accept": "Accetta",
+    "reject": "Rifiuta",
+    "confirmMessage": "Sei sicuro? Le analisi ci aiutano a migliorare. Questa app è completamente open source.",
+    "nevermind": "Annulla",
+    "confirmReject": "Sì, rifiuta"
+  },
   "support": {
     "title": "Supporto",
     "description": "Trova risposte alle domande frequenti o ottieni aiuto dalla nostra community.",
@@ -1187,8 +1234,8 @@
   },
   "connectedPrompts": {
     "title": "Flusso Prompt",
-    "description": "Alcuni prompt funzionano come workflow a più passaggi. Collega i tuoi prompt per creare una sequenza.",
     "addPromptFlow": "Questo prompt ha un passo successivo",
+    "testWorkflow": "Esegui Workflow",
     "addPrevious": "Aggiungi Precedente",
     "addNext": "Aggiungi Successivo",
     "addPreviousTitle": "Aggiungi Prompt Precedente",
@@ -1197,7 +1244,8 @@
     "addNextDescription": "Seleziona un prompt che viene dopo questo nel workflow.",
     "noConnections": "Nessun prompt collegato ancora. Aggiungi connessioni per creare una catena di prompt.",
     "previousSteps": "Passaggi precedenti",
-    "nextSteps": "Passaggi successivi",
+    "nextSteps": "Passi successivi",
+    "fullFlow": "Flusso completo",
     "searchPrompt": "Cerca Prompt",
     "searchPlaceholder": "Cerca per titolo...",
     "selectedPrompt": "Prompt Selezionato",
@@ -1211,7 +1259,19 @@
     "connectionAdded": "Connessione aggiunta con successo",
     "connectionDeleted": "Connessione eliminata",
     "deleteFailed": "Impossibile eliminare la connessione",
-    "noResults": "Nessun prompt trovato"
+    "noResults": "Nessun prompt trovato",
+    "outputText": "testo",
+    "outputImage": "immagine",
+    "outputVideo": "video",
+    "outputAudio": "audio",
+    "outputStructured": "strutturato",
+    "outputSkill": "abilità",
+    "inputImage": "immagine",
+    "inputVideo": "video",
+    "inputDocument": "documento",
+    "inputImages": "{count} immagini",
+    "inputVideos": "{count} video",
+    "inputDocuments": "{count} documenti"
   },
   "promptWritingGuide": {
     "title": "Come Scrivere Buoni Prompt",
@@ -1400,10 +1460,11 @@
     "academicCategoryTitle": "Riconoscimento Accademico",
     "communityCategoryTitle": "Community & GitHub",
     "featuredForbes": "Presentato su <link>Forbes</link>",
+    "featuredTagesspiegel": "Featured in <link>Der Tagesspiegel</link>",
     "referencedHarvard": "Citato da <link>Harvard University</link>",
     "referencedColumbia": "Citato da <link>Columbia University</link>",
     "referencedOlympic": "Citato da <link>Olympic College</link>",
-    "citedArxiv": "Citato in <link>articolo di ricerca arXiv</link>",
+    "googleScholarCitations": "<link>Oltre 40 citazioni accademiche</link> su Google Scholar",
     "githubStars": "<link>141k+ stelle GitHub</link>, repository di prompt più stellato",
     "githubStaffPick": "Selezionato come <link>GitHub Staff Pick</link>",
     "referencedGithubBlog": "Menzionato nel <link>GitHub Blog</link>",

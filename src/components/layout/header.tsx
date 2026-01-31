@@ -52,6 +52,7 @@ import {
   Chromium,
   Hammer,
   BookOpen,
+  MoreHorizontal,
 } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
@@ -78,7 +79,9 @@ import { NotificationBell } from "@/components/layout/notification-bell";
 import { setLocale } from "@/lib/i18n/client";
 import { useBranding } from "@/components/providers/branding-provider";
 import { analyticsAuth, analyticsSettings, analyticsExternal } from "@/lib/analytics";
-import { isChromeBrowser } from "@/lib/utils";
+import { isChromeBrowser, isFirefoxBrowser } from "@/lib/utils";
+
+const FIREFOX_ADDON_URL = "https://addons.mozilla.org/firefox/downloads/file/4675190/prompts_chat-1.4.1.xpi";
 
 const languages = [
   { code: "en", name: "English" },
@@ -117,10 +120,14 @@ export function Header({ authProvider = "credentials", allowRegistration = true 
   const user = session?.user;
   const isAdmin = user?.role === "ADMIN";
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [isChromeBased, setIsChromeBased] = useState(false);
+  const [browserType, setBrowserType] = useState<"chrome" | "firefox" | null>(null);
 
   useEffect(() => {
-    setIsChromeBased(isChromeBrowser());
+    if (isFirefoxBrowser()) {
+      setBrowserType("firefox");
+    } else if (isChromeBrowser()) {
+      setBrowserType("chrome");
+    }
   }, []);
 
   const handleCopyLogoSvg = async () => {
@@ -136,7 +143,7 @@ export function Header({ authProvider = "credentials", allowRegistration = true 
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-[0px] z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className={`flex h-12 items-center gap-4 ${pathname === "/developers" ? "px-4" : "container"}`}>
         {/* Mobile menu */}
         <Sheet open={mobileMenuOpen} onOpenChange={setMobileMenuOpen}>
@@ -205,6 +212,13 @@ export function Header({ authProvider = "credentials", allowRegistration = true 
                     className="flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
                   >
                     {t("nav.skills")}
+                  </Link>
+                  <Link 
+                    href="/workflows" 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="flex items-center gap-3 px-3 py-2.5 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-accent transition-colors"
+                  >
+                    {t("nav.workflows")}
                   </Link>
                   <Link 
                     href="/categories" 
@@ -361,23 +375,81 @@ export function Header({ authProvider = "credentials", allowRegistration = true 
             {t("nav.skills")}
           </Link>
           <Link
-            href="/categories"
+            href="/workflows"
             className="px-3 py-1.5 rounded-md text-muted-foreground transition-colors hover:text-foreground hover:bg-accent"
+          >
+            {t("nav.workflows")}
+          </Link>
+          {/* Categories, Tags, Promptmasters - visible on lg+ screens */}
+          <Link
+            href="/categories"
+            className="hidden 2xl:block px-3 py-1.5 rounded-md text-muted-foreground transition-colors hover:text-foreground hover:bg-accent"
           >
             {t("nav.categories")}
           </Link>
           <Link
             href="/tags"
-            className="px-3 py-1.5 rounded-md text-muted-foreground transition-colors hover:text-foreground hover:bg-accent"
+            className="hidden 2xl:block px-3 py-1.5 rounded-md text-muted-foreground transition-colors hover:text-foreground hover:bg-accent"
           >
             {t("nav.tags")}
           </Link>
           <Link
             href="/promptmasters"
-            className="px-3 py-1.5 rounded-md text-muted-foreground transition-colors hover:text-foreground hover:bg-accent"
+            className="hidden 2xl:block px-3 py-1.5 rounded-md text-muted-foreground transition-colors hover:text-foreground hover:bg-accent"
           >
             {t("nav.promptmasters")}
           </Link>
+          {/* Three-dot dropdown for Categories, Tags, Promptmasters on md screens */}
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="ghost" size="icon" className="2xl:hidden h-8 w-8">
+                <MoreHorizontal className="h-4 w-4" />
+                <span className="sr-only">{t("nav.more")}</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="start">
+              <DropdownMenuItem asChild>
+                <Link href="/categories">
+                  {t("nav.categories")}
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/tags">
+                  {t("nav.tags")}
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem asChild>
+                <Link href="/promptmasters">
+                  {t("nav.promptmasters")}
+                </Link>
+              </DropdownMenuItem>
+              {!branding.useCloneBranding && (
+                <>
+                  <DropdownMenuSeparator />
+                  <DropdownMenuItem asChild>
+                    <Link href="https://fka.gumroad.com/l/art-of-chatgpt-prompting">
+                      <BookOpen className="mr-2 h-4 w-4" />
+                      {t("nav.book")}
+                    </Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem asChild>
+                    <a href="/kids" className={kidsFont.className}>
+                      <MiniPromi className="mr-2 h-4 w-4" />
+                      <span className="font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent">
+                        {t("nav.forKids")}
+                      </span>
+                    </a>
+                  </DropdownMenuItem>
+                </>
+              )}
+              <DropdownMenuItem asChild>
+                <Link href="/developers">
+                  <Hammer className="mr-2 h-4 w-4" />
+                  {t("nav.developers")}
+                </Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </nav>
 
         {/* Spacer */}
@@ -387,7 +459,7 @@ export function Header({ authProvider = "credentials", allowRegistration = true 
         <div className="flex items-center gap-1">
           {/* Book link */}
           {!branding.useCloneBranding && (
-            <Button asChild variant="ghost" size="sm" className="hidden lg:flex h-8 gap-1.5">
+            <Button asChild variant="ghost" size="sm" className="hidden 2xl:flex h-8 gap-1.5">
               <Link href="https://fka.gumroad.com/l/art-of-chatgpt-prompting">
                 <BookOpen className="h-4 w-4" />
                 {t("nav.book")}
@@ -399,7 +471,7 @@ export function Header({ authProvider = "credentials", allowRegistration = true 
           {!branding.useCloneBranding && (
             <a 
               href="/kids" 
-              className={`hidden lg:flex items-center gap-1 px-2 py-1 rounded-md hover:bg-accent transition-colors ${kidsFont.className}`}
+              className={`hidden 2xl:flex items-center gap-1 px-2 py-1 rounded-md hover:bg-accent transition-colors ${kidsFont.className}`}
             >
               <MiniPromi className="h-5 w-4" />
               <span className="text-sm font-bold bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent">
@@ -409,7 +481,7 @@ export function Header({ authProvider = "credentials", allowRegistration = true 
           )}
 
           {/* Developers link */}
-          <Button asChild variant="ghost" size="icon" className="hidden lg:flex h-8 w-8">
+          <Button asChild variant="ghost" size="icon" className="hidden 2xl:flex h-8 w-8">
             <Link href="/developers" title={t("nav.developers")}>
               <Hammer className="h-4 w-4" />
               <span className="sr-only">{t("nav.developers")}</span>
@@ -429,7 +501,7 @@ export function Header({ authProvider = "credentials", allowRegistration = true 
           {/* Notifications */}
           {user && <NotificationBell />}
 
-          {isChromeBased && branding.chromeExtensionUrl && (
+          {browserType && branding.chromeExtensionUrl && (
             <Button
               variant="ghost"
               size="icon"
@@ -437,13 +509,19 @@ export function Header({ authProvider = "credentials", allowRegistration = true 
               asChild
             >
               <a
-                href={branding.chromeExtensionUrl}
+                href={browserType === "firefox" ? FIREFOX_ADDON_URL : branding.chromeExtensionUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => analyticsExternal.clickChromeExtension()}
               >
-                <Chromium className="h-4 w-4" />
-                <span className="sr-only">Get Chrome Extension</span>
+                {browserType === "firefox" ? (
+                  <svg className="h-4 w-4" viewBox="0 0 24 24" fill="#FF7139">
+                    <path d="M20.452 3.445a11.002 11.002 0 00-2.482-1.908C16.944.997 15.098.093 12.477.032c-.734-.017-1.457.03-2.174.144-.72.114-1.398.292-2.118.56-1.017.377-1.996.975-2.574 1.554.583-.349 1.476-.733 2.55-.992a10.083 10.083 0 013.729-.167c2.341.34 4.178 1.381 5.48 2.625a8.066 8.066 0 011.298 1.587c1.468 2.382 1.33 5.376.184 7.142-.85 1.312-2.67 2.544-4.37 2.53-.583-.023-1.438-.152-2.25-.566-2.629-1.343-3.021-4.688-1.118-6.306-.632-.136-1.82.13-2.646 1.363-.742 1.107-.7 2.816-.242 4.028a6.473 6.473 0 01-.59-1.895 7.695 7.695 0 01.416-3.845A8.212 8.212 0 019.45 5.399c.896-1.069 1.908-1.72 2.75-2.005-.54-.471-1.411-.738-2.421-.767C8.31 2.583 6.327 3.061 4.7 4.41a8.148 8.148 0 00-1.976 2.414c-.455.836-.691 1.659-.697 1.678.122-1.445.704-2.994 1.248-4.055-.79.413-1.827 1.668-2.41 3.042C.095 9.37-.2 11.608.14 13.989c.966 5.668 5.9 9.982 11.843 9.982C18.62 23.971 24 18.591 24 11.956a11.93 11.93 0 00-3.548-8.511z"/>
+                  </svg>
+                ) : (
+                  <Chromium className="h-4 w-4" />
+                )}
+                <span className="sr-only">Get Browser Extension</span>
               </a>
             </Button>
           )}

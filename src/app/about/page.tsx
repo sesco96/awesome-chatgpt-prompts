@@ -302,7 +302,7 @@ export default async function AboutPage() {
         <p className="text-muted-foreground">
           {t.rich("story1Rich", {
             repoLink: (chunks) => (
-              <Link href="https://github.com/f/awesome-chatgpt-prompts" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
+              <Link href="https://github.com/f/prompts.chat" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
                 {chunks}
               </Link>
             ),
@@ -368,6 +368,15 @@ export default async function AboutPage() {
                   ),
                 })}
               </li>
+              <li>
+                {t.rich("featuredTagesspiegel", {
+                  link: (chunks) => (
+                    <Link href="https://www.linkedin.com/posts/fatihkadirakin_i-was-on-german-der-tagesspiegel-newspaper-activity-7061622588774432769-o6Bc/" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
+                      {chunks}
+                    </Link>
+                  ),
+                })}
+              </li>
             </ul>
           </div>
 
@@ -403,9 +412,9 @@ export default async function AboutPage() {
                 })}
               </li>
               <li>
-                {t.rich("citedArxiv", {
+                {t.rich("googleScholarCitations", {
                   link: (chunks) => (
-                    <Link href="https://arxiv.org/pdf/2502.04484" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
+                    <Link href="https://scholar.google.com/citations?user=AZ0Dg8YAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
                       {chunks}
                     </Link>
                   ),
@@ -421,7 +430,7 @@ export default async function AboutPage() {
               <li>
                 {t.rich("githubStars", {
                   link: (chunks) => (
-                    <Link href="https://github.com/f/awesome-chatgpt-prompts" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
+                    <Link href="https://github.com/f/prompts.chat" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
                       {chunks}
                     </Link>
                   ),
@@ -448,7 +457,7 @@ export default async function AboutPage() {
               <li>
                 {t.rich("huggingFace", {
                   link: (chunks) => (
-                    <Link href="https://huggingface.co/datasets/fka/awesome-chatgpt-prompts" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
+                    <Link href="https://huggingface.co/datasets/fka/prompts.chat" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">
                       {chunks}
                     </Link>
                   ),
@@ -678,7 +687,7 @@ export default async function AboutPage() {
             />
           ))}
           <Link
-            href="https://github.com/f/awesome-chatgpt-prompts/graphs/contributors"
+            href="https://github.com/f/prompts.chat/graphs/contributors"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center w-8 h-8 rounded-full border border-dashed text-muted-foreground hover:text-primary hover:border-primary transition-colors text-xs"
@@ -689,7 +698,7 @@ export default async function AboutPage() {
         <p className="text-sm text-muted-foreground mt-3">
           {t("viewAllContributors")}{" "}
           <Link
-            href="https://github.com/f/awesome-chatgpt-prompts/graphs/contributors"
+            href="https://github.com/f/prompts.chat/graphs/contributors"
             target="_blank"
             rel="noopener noreferrer"
             className="underline hover:text-foreground"

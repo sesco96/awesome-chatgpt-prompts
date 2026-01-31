@@ -1,6 +1,6 @@
 {
   "name": "prompts.chat",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Developer toolkit for AI prompts - build, validate, parse, and connect to prompts.chat",
   "type": "module",
   "main": "./dist/index.js",
@@ -62,7 +62,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/f/awesome-chatgpt-prompts"
+    "url": "https://github.com/f/prompts.chat"
   },
   "homepage": "https://prompts.chat",
   "author": "Fatih Kadir Akın <fatihkadirakin@gmail.com>",

@@ -1,12 +1,12 @@
 import { getPreferenceValues } from "@raycast/api";
 import type { Prompt, PromptsResponse } from "./types";
 
-interface Preferences {
-  baseUrl: string;
+interface PromptsChatPreferences {
+  baseUrl?: string;
 }
 
 function getBaseUrl(): string {
-  const { baseUrl } = getPreferenceValues<Preferences>();
+  const { baseUrl } = getPreferenceValues<PromptsChatPreferences>();
   return baseUrl?.replace(/\/$/, "") || "https://prompts.chat";
 }
 

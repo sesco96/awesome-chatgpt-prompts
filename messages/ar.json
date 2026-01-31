@@ -39,6 +39,7 @@
     "promptmasters": "Promptmasters",
     "prompts": "الأوامر",
     "skills": "المهارات",
+    "workflows": "سير العمل",
     "categories": "الفئات",
     "tags": "الوسوم",
     "settings": "الإعدادات",
@@ -50,7 +51,8 @@
     "ide": "Typed-Prompts IDE",
     "developers": "المطورون",
     "book": "كتاب",
-    "forKids": "للأطفال"
+    "forKids": "للأطفال",
+    "more": "المزيد"
   },
   "brand": {
     "copyLogoSvg": "نسخ شعار SVG",
@@ -62,6 +64,7 @@
     "logoWithName": "الشعار مع الاسم",
     "forLightBackgrounds": "للخلفيات الفاتحة",
     "forDarkBackgrounds": "للخلفيات الداكنة",
+    "animatedLogos": "شعارات متحركة",
     "brandColors": "ألوان العلامة التجارية",
     "clickToCopy": "انقر لنسخ قيمة hex",
     "primary": "لون العلامة التجارية الأساسي",
@@ -141,6 +144,10 @@
     "mcpCommandPlaceholder": "npx -y @mcp/server-name",
     "mcpToolsPlaceholder": "tool1, tool2",
     "add": "إضافة",
+    "workflowLink": "رابط تشغيل سير العمل",
+    "workflowLinkDescription": "رابط URL حيث يمكن للمستخدمين اختبار أو تجربة سير العمل هذا (يظهر عندما يكون للأمر خطوات سابقة/تالية)",
+    "workflowLinkCreateNote": "احفظ الأمر أولاً، ثم أضف أوامر متصلة (الخطوات السابقة/التالية) لتفعيل هذا الحقل.",
+    "workflowLinkPlaceholder": "https://example.com/workflow-demo",
     "advancedOptions": "خيارات متقدمة",
     "searchContributors": "البحث بواسطة اسم المستخدم...",
     "noUsersFound": "لم يتم العثور على مستخدمين",
@@ -834,6 +841,32 @@
     "profileUrl": "رابط ملفك الشخصي",
     "email": "البريد الإلكتروني",
     "emailCannotChange": "لا يمكن تغيير البريد الإلكتروني",
+    "bio": "نبذة",
+    "bioPlaceholder": "أخبرنا قليلاً عن نفسك...",
+    "bioCharCount": "{count}/250",
+    "customLinks": "الروابط",
+    "customLinksDescription": "أضف روابط لملفاتك الشخصية ومواقعك",
+    "addLink": "إضافة رابط",
+    "linkType": "النوع",
+    "linkUrl": "الرابط",
+    "linkLabel": "التسمية (اختياري)",
+    "linkLabelPlaceholder": "تسمية مخصصة",
+    "removeLink": "إزالة",
+    "maxLinksReached": "الحد الأقصى 5 روابط",
+    "invalidUrl": "الرجاء إدخال رابط صحيح",
+    "linkTypes": {
+      "website": "موقع إلكتروني",
+      "github": "GitHub",
+      "twitter": "X (Twitter)",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "twitch": "Twitch",
+      "discord": "Discord",
+      "mastodon": "Mastodon",
+      "bluesky": "Bluesky",
+      "sponsor": "راعي"
+    },
     "saveChanges": "حفظ التغييرات",
     "profileUpdated": "تم تحديث الملف الشخصي بنجاح",
     "usernameTaken": "اسم المستخدم هذا مستخدم بالفعل"
@@ -846,6 +879,13 @@
     "noPromptsInFeed": "لا توجد أوامر في خلاصتك",
     "subscribeToCategories": "اشترك في التصنيفات لرؤية الأوامر هنا",
     "viewAllCategories": "عرض جميع التصنيفات"
+  },
+  "workflows": {
+    "title": "سير العمل",
+    "description": "أوامر ذات تدفقات واتصالات متسلسلة",
+    "noWorkflows": "لا توجد سير عمل بعد",
+    "noWorkflowsDescription": "سير العمل هي أوامر تتصل بأوامر أخرى بالتسلسل. أنشئ أمرًا وأضف اتصالات لبناء سير عمل.",
+    "browsePrompts": "تصفح الأوامر"
   },
   "collection": {
     "title": "مجموعتي",
@@ -893,9 +933,8 @@
       "harvardUniversity": "جامعة هارفارد",
       "columbiaUniversity": "جامعة كولومبيا",
       "olympicCollege": "كلية أوليمبيك",
-      "citedIn": "مُستشهد به في",
       "referencedIn": "مُشار إليه في",
-      "arxivPaper": "ورقة arXiv",
+      "academicCitations": "الاستشهادات الأكاديمية",
       "githubBlog": "مدونة GitHub",
       "mostLikedDataset": "#1 مجموعة البيانات الأكثر إعجاباً على Hugging Face",
       "githubStars": "نجوم GitHub",
@@ -907,7 +946,7 @@
       "becomeSponsor": "ادعم المجتمع",
       "firstEver": "أول مكتبة أوامر في العالم",
       "releasedOn": "صدرت في 5 ديسمبر 2022",
-      "lovedByOpenAI": "محبوب من مؤسسي OpenAI"
+      "lovedByPioneers": "محبوب من رواد الذكاء الاصطناعي"
     }
   },
   "notifications": {
@@ -1111,6 +1150,14 @@
     "terms": "الشروط",
     "support": "الدعم"
   },
+  "cookies": {
+    "message": "نستخدم ملفات تعريف الارتباط للتحليلات.",
+    "accept": "قبول",
+    "reject": "رفض",
+    "confirmMessage": "هل أنت متأكد؟ التحليلات تساعدنا على التحسين. هذا التطبيق مفتوح المصدر بالكامل.",
+    "nevermind": "إلغاء",
+    "confirmReject": "نعم، رفض"
+  },
   "support": {
     "title": "الدعم",
     "description": "ابحث عن إجابات للأسئلة الشائعة أو احصل على مساعدة من مجتمعنا.",
@@ -1187,8 +1234,8 @@
   },
   "connectedPrompts": {
     "title": "تدفق الأوامر",
-    "description": "بعض الأوامر تعمل كسير عمل متعدد الخطوات. قم بربط أوامرك لإنشاء تسلسل.",
     "addPromptFlow": "هذا الأمر له خطوة تالية",
+    "testWorkflow": "تشغيل سير العمل",
     "addPrevious": "إضافة سابق",
     "addNext": "إضافة تالي",
     "addPreviousTitle": "إضافة أمر سابق",
@@ -1198,6 +1245,7 @@
     "noConnections": "لا توجد أوامر متصلة بعد. أضف اتصالات لإنشاء سلسلة أوامر.",
     "previousSteps": "الخطوات السابقة",
     "nextSteps": "الخطوات التالية",
+    "fullFlow": "سير العمل الكامل",
     "searchPrompt": "بحث عن أمر",
     "searchPlaceholder": "البحث بالعنوان...",
     "selectedPrompt": "الأمر المحدد",
@@ -1211,7 +1259,19 @@
     "connectionAdded": "تمت إضافة الاتصال بنجاح",
     "connectionDeleted": "تم حذف الاتصال",
     "deleteFailed": "فشل حذف الاتصال",
-    "noResults": "لم يتم العثور على أوامر"
+    "noResults": "لم يتم العثور على أوامر",
+    "outputText": "نص",
+    "outputImage": "صورة",
+    "outputVideo": "فيديو",
+    "outputAudio": "صوت",
+    "outputStructured": "منظم",
+    "outputSkill": "مهارة",
+    "inputImage": "صورة",
+    "inputVideo": "فيديو",
+    "inputDocument": "مستند",
+    "inputImages": "{count} صور",
+    "inputVideos": "{count} فيديوهات",
+    "inputDocuments": "{count} مستندات"
   },
   "promptWritingGuide": {
     "title": "كيفية كتابة أوامر رائعة",
@@ -1400,10 +1460,11 @@
     "academicCategoryTitle": "الاعتراف الأكاديمي",
     "communityCategoryTitle": "المجتمع وGitHub",
     "featuredForbes": "ظهر في <link>Forbes</link>",
+    "featuredTagesspiegel": "Featured in <link>Der Tagesspiegel</link>",
     "referencedHarvard": "مرجع في <link>جامعة هارفارد</link>",
     "referencedColumbia": "مرجع في <link>جامعة كولومبيا</link>",
     "referencedOlympic": "مرجع في <link>Olympic College</link>",
-    "citedArxiv": "مقتبس في <link>ورقة بحثية arXiv</link>",
+    "googleScholarCitations": "<link>أكثر من 40 استشهاد أكاديمي</link> على Google Scholar",
     "githubStars": "<link>141k+ نجمة GitHub</link>، أكثر مستودع أوامر نجومية",
     "githubStaffPick": "مختار كـ <link>GitHub Staff Pick</link>",
     "referencedGithubBlog": "مُشار إليه في <link>مدونة GitHub</link>",

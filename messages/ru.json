@@ -39,6 +39,7 @@
     "promptmasters": "Мастера промптов",
     "prompts": "Промпты",
     "skills": "Навыки",
+    "workflows": "Рабочие процессы",
     "categories": "Категории",
     "tags": "Теги",
     "settings": "Настройки",
@@ -50,7 +51,8 @@
     "ide": "Typed-Prompts IDE",
     "developers": "Разработчикам",
     "book": "Книга",
-    "forKids": "Для детей"
+    "forKids": "Для детей",
+    "more": "Ещё"
   },
   "brand": {
     "copyLogoSvg": "Скопировать логотип SVG",
@@ -62,6 +64,7 @@
     "logoWithName": "Логотип с названием",
     "forLightBackgrounds": "Для светлого фона",
     "forDarkBackgrounds": "Для темного фона",
+    "animatedLogos": "Анимированные логотипы",
     "brandColors": "Цвета бренда",
     "clickToCopy": "Нажмите для копирования hex-значения",
     "primary": "Основной цвет бренда",
@@ -141,6 +144,10 @@
     "mcpCommandPlaceholder": "npx -y @mcp/server-name",
     "mcpToolsPlaceholder": "tool1, tool2",
     "add": "Добавить",
+    "workflowLink": "Ссылка на рабочий процесс",
+    "workflowLinkDescription": "URL, где пользователи могут протестировать этот рабочий процесс",
+    "workflowLinkCreateNote": "Сначала сохраните промпт, затем добавьте связанные промпты, чтобы активировать это поле.",
+    "workflowLinkPlaceholder": "https://example.com/workflow-demo",
     "advancedOptions": "Расширенные настройки",
     "searchContributors": "Поиск по имени пользователя...",
     "noUsersFound": "Пользователи не найдены",
@@ -834,6 +841,32 @@
     "profileUrl": "URL вашего профиля",
     "email": "Email",
     "emailCannotChange": "Email нельзя изменить",
+    "bio": "О себе",
+    "bioPlaceholder": "Расскажите немного о себе...",
+    "bioCharCount": "{count}/250",
+    "customLinks": "Ссылки",
+    "customLinksDescription": "Добавьте ссылки на свои социальные профили и сайты",
+    "addLink": "Добавить ссылку",
+    "linkType": "Тип",
+    "linkUrl": "URL",
+    "linkLabel": "Метка (необязательно)",
+    "linkLabelPlaceholder": "Своя метка",
+    "removeLink": "Удалить",
+    "maxLinksReached": "Максимум 5 ссылок",
+    "invalidUrl": "Введите корректный URL",
+    "linkTypes": {
+      "website": "Сайт",
+      "github": "GitHub",
+      "twitter": "X (Twitter)",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "twitch": "Twitch",
+      "discord": "Discord",
+      "mastodon": "Mastodon",
+      "bluesky": "Bluesky",
+      "sponsor": "Спонсор"
+    },
     "saveChanges": "Сохранить изменения",
     "profileUpdated": "Профиль успешно обновлен",
     "usernameTaken": "Это имя пользователя уже занято"
@@ -846,6 +879,13 @@
     "noPromptsInFeed": "В вашей ленте нет промптов",
     "subscribeToCategories": "Подпишитесь на категории, чтобы видеть промпты здесь",
     "viewAllCategories": "Все категории"
+  },
+  "workflows": {
+    "title": "Рабочие процессы",
+    "description": "Промпты с последовательными потоками и связями",
+    "noWorkflows": "Пока нет рабочих процессов",
+    "noWorkflowsDescription": "Рабочие процессы — это промпты, которые последовательно связаны с другими промптами. Создайте промпт и добавьте связи для построения рабочего процесса.",
+    "browsePrompts": "Обзор промптов"
   },
   "collection": {
     "title": "Моя Коллекция",
@@ -893,9 +933,8 @@
       "harvardUniversity": "Гарвардский университет",
       "columbiaUniversity": "Колумбийский университет",
       "olympicCollege": "Olympic College",
-      "citedIn": "Цитируется в",
       "referencedIn": "Упомянуто в",
-      "arxivPaper": "Статья arXiv",
+      "academicCitations": "Академические цитирования",
       "githubBlog": "Блоге GitHub",
       "mostLikedDataset": "#1 Самый популярный датасет на Hugging Face",
       "githubStars": "Звезд на GitHub",
@@ -907,7 +946,7 @@
       "becomeSponsor": "Поддержать сообщество",
       "firstEver": "Первая в мире библиотека промптов",
       "releasedOn": "Выпущена 5 декабря 2022",
-      "lovedByOpenAI": "Любимо основателями OpenAI"
+      "lovedByPioneers": "Любимо пионерами ИИ"
     }
   },
   "notifications": {
@@ -1111,6 +1150,14 @@
     "terms": "Условия",
     "support": "Поддержка"
   },
+  "cookies": {
+    "message": "Мы используем cookies для аналитики.",
+    "accept": "Принять",
+    "reject": "Отклонить",
+    "confirmMessage": "Вы уверены? Аналитика помогает нам улучшаться. Это приложение полностью открытое.",
+    "nevermind": "Отмена",
+    "confirmReject": "Да, отклонить"
+  },
   "support": {
     "title": "Поддержка",
     "description": "Найдите ответы на часто задаваемые вопросы или получите помощь от нашего сообщества.",
@@ -1187,8 +1234,8 @@
   },
   "connectedPrompts": {
     "title": "Поток промптов",
-    "description": "Некоторые промпты работают как многоэтапные рабочие процессы. Соедините свои промпты для создания последовательности.",
     "addPromptFlow": "У этого промпта есть следующий шаг",
+    "testWorkflow": "Запустить рабочий процесс",
     "addPrevious": "Добавить предыдущий",
     "addNext": "Добавить следующий",
     "addPreviousTitle": "Добавить предыдущий промпт",
@@ -1198,6 +1245,7 @@
     "noConnections": "Связанных промптов пока нет. Добавьте связи для создания цепочки промптов.",
     "previousSteps": "Предыдущие шаги",
     "nextSteps": "Следующие шаги",
+    "fullFlow": "Полный рабочий процесс",
     "searchPrompt": "Поиск промпта",
     "searchPlaceholder": "Поиск по названию...",
     "selectedPrompt": "Выбранный промпт",
@@ -1211,7 +1259,19 @@
     "connectionAdded": "Связь успешно добавлена",
     "connectionDeleted": "Связь удалена",
     "deleteFailed": "Не удалось удалить связь",
-    "noResults": "Промпты не найдены"
+    "noResults": "Промпты не найдены",
+    "outputText": "текст",
+    "outputImage": "изображение",
+    "outputVideo": "видео",
+    "outputAudio": "аудио",
+    "outputStructured": "структурированный",
+    "outputSkill": "навык",
+    "inputImage": "изображение",
+    "inputVideo": "видео",
+    "inputDocument": "документ",
+    "inputImages": "{count} изображений",
+    "inputVideos": "{count} видео",
+    "inputDocuments": "{count} документов"
   },
   "promptWritingGuide": {
     "title": "Как писать отличные промпты",
@@ -1400,10 +1460,11 @@
     "academicCategoryTitle": "Академическое признание",
     "communityCategoryTitle": "Сообщество и GitHub",
     "featuredForbes": "Упомянуто в <link>Forbes</link>",
+    "featuredTagesspiegel": "Featured in <link>Der Tagesspiegel</link>",
     "referencedHarvard": "Ссылка в <link>Гарвардском университете</link>",
     "referencedColumbia": "Ссылка в <link>Колумбийском университете</link>",
     "referencedOlympic": "Ссылка в <link>Olympic College</link>",
-    "citedArxiv": "Цитируется в <link>исследовательской статье arXiv</link>",
+    "googleScholarCitations": "<link>Более 40 академических цитирований</link> в Google Scholar",
     "githubStars": "<link>141k+ звёзд GitHub</link>, самый звёздный репозиторий промптов",
     "githubStaffPick": "Выбран как <link>GitHub Staff Pick</link>",
     "referencedGithubBlog": "Упомянуто в <link>блоге GitHub</link>",

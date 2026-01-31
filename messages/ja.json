@@ -39,6 +39,7 @@
     "promptmasters": "Promptmasters",
     "prompts": "プロンプト",
     "skills": "スキル",
+    "workflows": "ワークフロー",
     "categories": "カテゴリー",
     "tags": "タグ",
     "settings": "設定",
@@ -50,7 +51,8 @@
     "ide": "Typed-Prompts IDE",
     "developers": "開発者",
     "book": "本",
-    "forKids": "子ども向け"
+    "forKids": "子ども向け",
+    "more": "もっと見る"
   },
   "brand": {
     "copyLogoSvg": "ロゴSVGをコピー",
@@ -62,6 +64,7 @@
     "logoWithName": "名前付きロゴ",
     "forLightBackgrounds": "明るい背景用",
     "forDarkBackgrounds": "暗い背景用",
+    "animatedLogos": "アニメーションロゴ",
     "brandColors": "ブランドカラー",
     "clickToCopy": "クリックして16進値をコピー",
     "primary": "プライマリブランドカラー",
@@ -138,6 +141,10 @@
     "mcpCommandPlaceholder": "npx -y @mcp/server-name",
     "mcpToolsPlaceholder": "tool1, tool2",
     "add": "追加",
+    "workflowLink": "ワークフローリンク",
+    "workflowLinkDescription": "ユーザーがこのワークフローをテストできるURL",
+    "workflowLinkCreateNote": "まずプロンプトを保存し、次に接続されたプロンプトを追加してこのフィールドを有効にしてください。",
+    "workflowLinkPlaceholder": "https://example.com/workflow-demo",
     "advancedOptions": "詳細オプション",
     "searchContributors": "ユーザー名で検索...",
     "noUsersFound": "ユーザーが見つかりません",
@@ -834,6 +841,32 @@
     "profileUrl": "プロフィールURL",
     "email": "メールアドレス",
     "emailCannotChange": "メールアドレスは変更できません",
+    "bio": "自己紹介",
+    "bioPlaceholder": "自己紹介を入力してください...",
+    "bioCharCount": "{count}/250",
+    "customLinks": "リンク",
+    "customLinksDescription": "SNSやウェブサイトへのリンクを追加",
+    "addLink": "リンクを追加",
+    "linkType": "種類",
+    "linkUrl": "URL",
+    "linkLabel": "ラベル（任意）",
+    "linkLabelPlaceholder": "カスタムラベル",
+    "removeLink": "削除",
+    "maxLinksReached": "最大5つのリンクまで",
+    "invalidUrl": "有効なURLを入力してください",
+    "linkTypes": {
+      "website": "ウェブサイト",
+      "github": "GitHub",
+      "twitter": "X (Twitter)",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "twitch": "Twitch",
+      "discord": "Discord",
+      "mastodon": "Mastodon",
+      "bluesky": "Bluesky",
+      "sponsor": "スポンサー"
+    },
     "saveChanges": "変更を保存",
     "profileUpdated": "プロフィールを更新しました",
     "usernameTaken": "このユーザー名は既に使用されています"
@@ -846,6 +879,13 @@
     "noPromptsInFeed": "フィードにプロンプトがありません",
     "subscribeToCategories": "カテゴリーを購読してプロンプトを表示",
     "viewAllCategories": "すべてのカテゴリーを見る"
+  },
+  "workflows": {
+    "title": "ワークフロー",
+    "description": "シーケンシャルなフローと接続を持つプロンプト",
+    "noWorkflows": "まだワークフローがありません",
+    "noWorkflowsDescription": "ワークフローは、他のプロンプトに順番に接続するプロンプトです。プロンプトを作成し、接続を追加してワークフローを構築してください。",
+    "browsePrompts": "プロンプトを見る"
   },
   "collection": {
     "title": "マイコレクション",
@@ -893,9 +933,8 @@
       "harvardUniversity": "ハーバード大学",
       "columbiaUniversity": "コロンビア大学",
       "olympicCollege": "オリンピックカレッジ",
-      "citedIn": "引用先",
       "referencedIn": "参照先",
-      "arxivPaper": "arXiv論文",
+      "academicCitations": "学術引用",
       "githubBlog": "GitHubブログ",
       "mostLikedDataset": "Hugging Faceで#1最も人気のデータセット",
       "githubStars": "GitHubスター",
@@ -907,7 +946,7 @@
       "becomeSponsor": "コミュニティを支援",
       "firstEver": "世界初のプロンプトライブラリ",
       "releasedOn": "2022年12月5日リリース",
-      "lovedByOpenAI": "OpenAI創設者に愛されている"
+      "lovedByPioneers": "AIパイオニアに愛されている"
     }
   },
   "notifications": {
@@ -1111,6 +1150,14 @@
     "terms": "利用規約",
     "support": "サポート"
   },
+  "cookies": {
+    "message": "分析のためにCookieを使用しています。",
+    "accept": "同意",
+    "reject": "拒否",
+    "confirmMessage": "本当によろしいですか？分析は改善に役立ちます。このアプリは完全にオープンソースです。",
+    "nevermind": "キャンセル",
+    "confirmReject": "はい、拒否します"
+  },
   "support": {
     "title": "サポート",
     "description": "よくある質問への回答を見つけるか、コミュニティからサポートを受けてください。",
@@ -1187,8 +1234,8 @@
   },
   "connectedPrompts": {
     "title": "プロンプトフロー",
-    "description": "一部のプロンプトは複数ステップのワークフローとして機能します。プロンプトを接続してシーケンスを作成しましょう。",
     "addPromptFlow": "このプロンプトには次のステップがあります",
+    "testWorkflow": "ワークフローを実行",
     "addPrevious": "前を追加",
     "addNext": "次を追加",
     "addPreviousTitle": "前のプロンプトを追加",
@@ -1198,6 +1245,7 @@
     "noConnections": "接続されたプロンプトはまだありません。プロンプトチェーンを作成するには接続を追加してください。",
     "previousSteps": "前のステップ",
     "nextSteps": "次のステップ",
+    "fullFlow": "完全なフロー",
     "searchPrompt": "プロンプトを検索",
     "searchPlaceholder": "タイトルで検索...",
     "selectedPrompt": "選択したプロンプト",
@@ -1211,7 +1259,19 @@
     "connectionAdded": "接続が正常に追加されました",
     "connectionDeleted": "接続が削除されました",
     "deleteFailed": "接続の削除に失敗しました",
-    "noResults": "プロンプトが見つかりません"
+    "noResults": "プロンプトが見つかりません",
+    "outputText": "テキスト",
+    "outputImage": "画像",
+    "outputVideo": "動画",
+    "outputAudio": "音声",
+    "outputStructured": "構造化",
+    "outputSkill": "スキル",
+    "inputImage": "画像",
+    "inputVideo": "動画",
+    "inputDocument": "ドキュメント",
+    "inputImages": "{count}枚の画像",
+    "inputVideos": "{count}本の動画",
+    "inputDocuments": "{count}件のドキュメント"
   },
   "promptWritingGuide": {
     "title": "優れたプロンプトの書き方",
@@ -1400,10 +1460,11 @@
     "academicCategoryTitle": "学術的認知",
     "communityCategoryTitle": "コミュニティ & GitHub",
     "featuredForbes": "<link>Forbes</link>で紹介",
+    "featuredTagesspiegel": "Featured in <link>Der Tagesspiegel</link>",
     "referencedHarvard": "<link>ハーバード大学</link>で参照",
     "referencedColumbia": "<link>コロンビア大学</link>で参照",
     "referencedOlympic": "<link>Olympic College</link>で参照",
-    "citedArxiv": "<link>arXiv研究論文</link>で引用",
+    "googleScholarCitations": "Google Scholarで<link>40件以上の学術引用</link>",
     "githubStars": "<link>141k+ GitHubスター</link>、最も星の多いプロンプトリポジトリ",
     "githubStaffPick": "<link>GitHub Staff Pick</link>に選出",
     "referencedGithubBlog": "<link>GitHubブログ</link>で紹介",

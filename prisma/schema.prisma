@@ -15,6 +15,8 @@ model User {
   name                      String?
   password                  String?
   avatar                    String?
+  bio                       String?                @db.VarChar(250)
+  customLinks               Json?                  // Array of {type: string, url: string, label?: string}
   role                      UserRole               @default(USER)
   locale                    String                 @default("en")
   emailVerified             DateTime?
@@ -127,6 +129,7 @@ model Prompt {
   collectedBy         Collection[]
   bestWithModels      String[]           // Model slugs this prompt works best with (max 3), e.g. ["gpt-4o", "claude-3-5-sonnet"]
   bestWithMCP         Json?              // MCP configs array, e.g. [{command: "npx -y @mcp/server", tools: ["tool1"]}]
+  workflowLink        String?            // URL to test/demo the workflow when prompt has previous/next connections
 
   @@index([authorId])
   @@index([categoryId])
